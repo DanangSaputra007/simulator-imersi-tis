@@ -1,0 +1,1079 @@
+<!doctype html><html><head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(105%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(135%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b3114">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Simulator Imersi TIS | deployed with HTMLaunch">
+<link rel="canonical" href="https://DanangSaputra007.github.io/simulator-imersi-tis/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Simulator Imersi TIS">
+<meta property="og:title" content="Simulator Imersi TIS">
+<meta property="og:description" content="Simulator Imersi TIS | deployed with HTMLaunch">
+<meta property="og:url" content="https://DanangSaputra007.github.io/simulator-imersi-tis/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FDanangSaputra007.github.io%2Fsimulator-imersi-tis%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Simulator Imersi TIS">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simulator Imersi TIS">
+<meta name="twitter:description" content="Simulator Imersi TIS | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FDanangSaputra007.github.io%2Fsimulator-imersi-tis%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Simulator Imersi TIS">
+<meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Simulator Imersi TIS</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400&family=Carlito:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+/* Tata letak: meja kerja laboratorium. Kendali dan bioreaktor di atas, data jurnal di bawah. */
+:root {
+  --bg: #FBFDFE; --panel: #E8F3FA; --line: #C4D8E4; --ink: #1A1A1A; --muted: #41566A; --head: #0B3C5D;
+  --wet: #0072B2; --wet-fill: rgba(86, 180, 233, .55); --on-wet: #FFFFFF;
+  --air: #E69F00; --air-soft: #FBEBC8; --on-air: #1A1A1A;
+  --leaf: #009E73; --mark: #A5C2D5; --glass: #FFFFFF; --pipe: #7C95A6;
+  --sys-a: #0072B2; --sys-b: #E69F00; --sys-c: #009E73; --on-a: #FFFFFF; --on-b: #1A1A1A; --on-c: #1A1A1A;
+  --display: "Caladea", Cambria, Georgia, serif;
+  --body: "Carlito", Calibri, "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1C27; --panel: #14303F; --line: #2C4C60; --ink: #EDF4F8; --muted: #AFC5D3; --head: #CFE6F5;
+    --wet: #5BB6EA; --wet-fill: rgba(86, 180, 233, .38); --on-wet: #0C1C27;
+    --air: #E69F00; --air-soft: #43340F; --on-air: #1A1A1A;
+    --leaf: #2FC29B; --mark: #3F6479; --glass: #0F2432; --pipe: #6F8A9C;
+    --sys-a: #2F8FD0; --sys-b: #B98000; --sys-c: #0F9470; --on-a: #0C1C27; --on-b: #0C1C27; --on-c: #0C1C27;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1C27; --panel: #14303F; --line: #2C4C60; --ink: #EDF4F8; --muted: #AFC5D3; --head: #CFE6F5;
+  --wet: #5BB6EA; --wet-fill: rgba(86, 180, 233, .38); --on-wet: #0C1C27;
+  --air: #E69F00; --air-soft: #43340F; --on-air: #1A1A1A;
+  --leaf: #2FC29B; --mark: #3F6479; --glass: #0F2432; --pipe: #6F8A9C;
+  --sys-a: #2F8FD0; --sys-b: #B98000; --sys-c: #0F9470; --on-a: #0C1C27; --on-b: #0C1C27; --on-c: #0C1C27;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 30px; padding-block: 32px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2 { font-family: var(--display); color: var(--head); margin: 0; text-wrap: balance; line-height: 1.15; }
+h1 { font-size: clamp(2rem, 5vw, 2.75rem); }
+h2 { font-size: 1.4rem; }
+p { margin: 0; }
+.lead { max-width: 68ch; margin-top: 8px; font-size: 1.1rem; }
+.eyebrow { font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.small { font-size: .9rem; color: var(--muted); }
+button, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--air); outline-offset: 2px; border-radius: 4px; }
+
+/* Perlakuan */
+.presets { display: grid; gap: 10px; }
+.preset-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.preset { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 10px; align-items: center; text-align: left; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 11px; cursor: pointer; }
+.preset:hover { border-color: var(--wet); }
+.preset b { grid-row: span 2; font-family: var(--display); font-size: 1.5rem; color: var(--head); }
+.preset span { min-width: 0; font-size: .95rem; line-height: 1.2; }
+.preset small { min-width: 0; font-size: .82rem; color: var(--muted); line-height: 1.25; }
+.preset[aria-pressed="true"] { background: var(--wet); border-color: var(--wet); }
+.preset[aria-pressed="true"] b, .preset[aria-pressed="true"] span, .preset[aria-pressed="true"] small { color: var(--on-wet); }
+
+/* Meja kerja */
+.bench { display: grid; grid-template-columns: minmax(0, 370px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.controls { background: var(--panel); border-radius: 10px; padding: 18px 20px; display: grid; gap: 15px; }
+.status { display: flex; gap: 8px; align-items: center; font-weight: 700; font-size: .97rem; line-height: 1.25; }
+.status svg { flex: none; width: 18px; height: 18px; }
+.status .ok { fill: var(--wet); }
+.status .no { fill: none; stroke: var(--muted); stroke-width: 2; stroke-dasharray: 3 3; }
+.field { display: grid; gap: 1px; min-width: 0; }
+.field-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.field-head label, .legend-label { font-weight: 700; }
+output { font-weight: 700; color: var(--head); }
+input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 28px; margin: 0; background: transparent; cursor: pointer; }
+input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: var(--line); }
+input[type=range]::-moz-range-track { height: 6px; border-radius: 3px; background: var(--line); }
+input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; margin-top: -7px; border-radius: 50%; background: var(--wet); border: 2px solid var(--panel); box-shadow: 0 0 0 1px var(--wet); }
+input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--wet); border: 2px solid var(--panel); box-shadow: 0 0 0 1px var(--wet); }
+.ticks { position: relative; height: 24px; }
+.tick { position: absolute; top: 0; transform: translateX(-50%); background: none; border: 0; padding: 2px 3px; font-size: .84rem; line-height: 1.1; color: var(--muted); cursor: pointer; white-space: nowrap; }
+.tick::before { content: ""; display: block; width: 2px; height: 6px; margin: 0 auto 1px; background: var(--muted); }
+.tick:hover { color: var(--ink); text-decoration: underline; }
+fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 4px; }
+legend { padding: 0; margin-bottom: 4px; font-weight: 700; }
+.seg { display: flex; border: 1px solid var(--wet); border-radius: 7px; overflow: hidden; }
+.seg label { flex: 1 1 0; min-width: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6px 4px; cursor: pointer; font-size: .95rem; background: var(--bg); line-height: 1.2; }
+.seg label + label { border-left: 1px solid var(--wet); }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.seg label:has(input:checked) { background: var(--wet); color: var(--on-wet); font-weight: 700; }
+.seg label:has(input:focus-visible) { outline: 3px solid var(--air); outline-offset: -3px; }
+
+.stage { display: grid; gap: 10px; min-width: 0; }
+.stage-top { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.phase { font-weight: 700; padding: 3px 12px; border-radius: 999px; min-width: 112px; text-align: center; }
+.phase.wet { background: var(--wet); color: var(--on-wet); }
+.phase.dry { background: var(--air); color: var(--on-air); }
+.clock { color: var(--muted); }
+.play { margin-left: auto; background: var(--bg); border: 1px solid var(--wet); border-radius: 7px; padding: 4px 14px; cursor: pointer; }
+.play:hover { background: var(--panel); }
+#reaktor { display: block; width: 100%; height: auto; max-height: 330px; }
+#reaktor text { font-family: var(--body); font-size: 15px; fill: var(--ink); }
+.vessel { fill: none; stroke: var(--head); stroke-width: 2.5; }
+.glass { fill: var(--glass); }
+.medium { fill: var(--wet-fill); }
+.basket { stroke: var(--head); stroke-width: 2; stroke-dasharray: 7 5; }
+.pipe { fill: none; stroke: var(--pipe); stroke-width: 4; }
+.pipe.on { stroke: var(--air); }
+.arrow { fill: var(--pipe); }
+.arrow.on { fill: var(--air); }
+.unit { fill: var(--panel); stroke: var(--head); stroke-width: 1.5; }
+.leaf { fill: var(--leaf); }
+.stem { stroke: var(--leaf); stroke-width: 2.5; stroke-linecap: round; }
+
+.strip-wrap { display: grid; gap: 3px; }
+.strip { position: relative; height: 32px; background: var(--air-soft); border-radius: 4px; overflow: hidden; cursor: pointer; }
+.strip i { position: absolute; top: 0; bottom: 0; min-width: 2px; background: var(--wet); }
+.strip .head { background: var(--ink); width: 2px; min-width: 2px; z-index: 2; }
+.axis { position: relative; height: 18px; font-size: .84rem; color: var(--muted); }
+.axis span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.axis span:first-child { transform: none; }
+.axis span:last-child { transform: translateX(-100%); }
+.keys { display: flex; gap: 16px; flex-wrap: wrap; font-size: .92rem; color: var(--muted); }
+.keys span { display: inline-flex; gap: 6px; align-items: center; }
+.swatch { width: 14px; height: 12px; border-radius: 2px; display: inline-block; }
+
+.readouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 18px; margin: 6px 0 0; padding-top: 14px; border-top: 1px solid var(--line); }
+.readouts div { min-width: 0; }
+.readouts dt { font-size: .9rem; color: var(--muted); line-height: 1.2; }
+.readouts dd { margin: 2px 0 0; font-family: var(--display); font-size: 1.45rem; color: var(--head); line-height: 1.15; }
+.readouts small { display: block; font-family: var(--body); font-size: .84rem; color: var(--muted); margin-top: 2px; }
+
+/* Hasil */
+.results { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.hasil { background: var(--panel); border-radius: 10px; padding: 18px 20px; display: grid; gap: 10px; }
+.tag { justify-self: start; font-size: .84rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; }
+.tag.yes { background: var(--wet); color: var(--on-wet); }
+.tag.not { border: 1.5px dashed var(--muted); color: var(--ink); }
+.hasil h3 { margin: 0; font-family: var(--display); font-size: 1.2rem; color: var(--head); line-height: 1.2; }
+.rows { margin: 0; display: grid; }
+.rows div { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-top: 1px solid var(--line); }
+.rows dt { min-width: 0; }
+.rows dd { margin: 0; font-weight: 700; text-align: right; }
+.rows dd small { font-weight: 400; color: var(--muted); }
+.hasil ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+.jump { justify-self: start; background: var(--wet); color: var(--on-wet); border: 0; border-radius: 7px; padding: 7px 14px; cursor: pointer; font-weight: 700; }
+
+.compare { display: grid; gap: 10px; min-width: 0; }
+.compare-head { display: flex; gap: 12px; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+.metric label { font-weight: 700; margin-right: 6px; }
+select { background: var(--bg); border: 1px solid var(--wet); border-radius: 7px; padding: 5px 8px; max-width: 100%; }
+.bars { display: grid; gap: 3px; }
+.bar-row { display: grid; grid-template-columns: 158px minmax(0, 1fr); gap: 10px; align-items: center; background: none; border: 0; border-radius: 6px; padding: 4px 6px; text-align: left; cursor: pointer; }
+.bar-row:hover, .bar-row:focus-visible { background: var(--panel); }
+.bar-name { font-size: .95rem; line-height: 1.2; }
+.bar-name b { font-family: var(--display); color: var(--head); margin-right: 4px; }
+.bar-track { display: flex; align-items: center; gap: 8px; min-height: 28px; border-left: 1px solid var(--muted); min-width: 0; }
+.bar-fill { --c: var(--mark); height: 22px; border-radius: 0 4px 4px 0; background: var(--c); flex: none; }
+.bar-row:not(.static)[data-on="1"] .bar-fill { --c: var(--wet); }
+.bar-fill.calc { background: repeating-linear-gradient(135deg, var(--c) 0 4px, transparent 4px 7px); }
+.bar-row[data-on="1"] .bar-name, .bar-row[data-on="1"] .bar-val { font-weight: 700; }
+.bar-val { white-space: nowrap; font-size: .95rem; }
+.bar-val small { color: var(--muted); margin-left: 3px; }
+.bar-none { padding-left: 8px; font-size: .9rem; color: var(--muted); }
+.detail { min-height: 1.5em; font-size: .97rem; }
+.keys .calc { background: repeating-linear-gradient(135deg, var(--wet) 0 3px, transparent 3px 5px); }
+details { border-top: 1px solid var(--line); padding-top: 8px; }
+summary { cursor: pointer; font-weight: 700; }
+.table-box { overflow-x: auto; margin-top: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+thead th { color: var(--head); }
+
+.closing { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.closing > div { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.closing ol, .closing ul { margin: 0; padding-left: 1.2em; display: grid; gap: 7px; max-width: 65ch; }
+.source { font-size: .9rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+.source a { color: var(--ink); }
+
+/* Mode dan bandingkan sistem */
+.mode { display: grid; gap: 30px; min-width: 0; }
+.modes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.modes button { background: var(--bg); border: 1px solid var(--wet); border-radius: 7px; padding: 7px 16px; cursor: pointer; font-weight: 700; }
+.modes button[aria-pressed="true"] { background: var(--wet); color: var(--on-wet); }
+.section-head { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: space-between; align-items: center; }
+.designs { display: grid; gap: 12px; }
+.phase-ctl { display: flex; gap: 8px; align-items: stretch; flex-wrap: wrap; }
+.phase-ctl .seg { min-width: 230px; }
+.phase-ctl .play { margin-left: 0; }
+.sys-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.sys { background: var(--panel); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.sys svg { display: block; width: 100%; height: auto; }
+.sys svg text, #segitiga text { font-family: var(--body); font-size: 13px; fill: var(--ink); }
+.sys-name { justify-self: start; margin: 0; padding: 2px 12px; border-radius: 6px; font-family: var(--display); font-size: 1.1rem; }
+.sys-name.a { background: var(--sys-a); color: var(--on-a); }
+.sys-name.b { background: var(--sys-b); color: var(--on-b); }
+.sys-name.c { background: var(--sys-c); color: var(--on-c); }
+.sys .rows dd, .study .rows dd { font-weight: 400; }
+.sys .rows dt { color: var(--muted); flex: none; }
+.lvl { transition: transform 1.1s ease-in-out; }
+.sys-grid.wet .lvl { transform: translateY(var(--shift)); }
+.sys-grid.wet .air.pipe, .sys-grid:not(.wet) .vent.pipe { stroke: var(--air); }
+.sys-grid.wet .air.arrow, .sys-grid:not(.wet) .vent.arrow { fill: var(--air); }
+.sys-grid.wet .wet-line { stroke: var(--wet); }
+.evidence { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.pairs { display: grid; gap: 8px; min-width: 0; }
+#segitiga { display: block; width: 100%; height: auto; }
+.edge { cursor: pointer; }
+.edge .hit { stroke: transparent; stroke-width: 20; }
+.edge .stroke { stroke: var(--pipe); stroke-width: 3; }
+.edge.on .stroke { stroke: var(--ink); stroke-width: 6; }
+.node.a rect { fill: var(--sys-a); }
+.node.b rect { fill: var(--sys-b); }
+.node.c rect { fill: var(--sys-c); }
+#segitiga .node text { font-size: 15px; font-weight: 700; }
+#segitiga .node.a text { fill: var(--on-a); }
+#segitiga .node.b text { fill: var(--on-b); }
+#segitiga .node.c text { fill: var(--on-c); }
+.study-btns { display: grid; gap: 6px; }
+.study-btn { display: grid; text-align: left; background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.study-btn:hover { border-color: var(--wet); }
+.study-btn small { color: var(--muted); font-size: .86rem; }
+.study-btn[aria-pressed="true"] { background: var(--wet); border-color: var(--wet); color: var(--on-wet); }
+.study-btn[aria-pressed="true"] small { color: var(--on-wet); }
+.study { display: grid; gap: 10px; min-width: 0; }
+.study h3 { margin: 0; font-family: var(--display); font-size: 1.3rem; color: var(--head); line-height: 1.2; }
+.bar-row.static { cursor: default; }
+.bar-row.static:hover { background: none; }
+.c-a { --c: var(--sys-a); }
+.c-b { --c: var(--sys-b); }
+.c-c { --c: var(--sys-c); }
+.c-o { --c: var(--mark); }
+.best { font-size: .82rem; font-weight: 700; border: 1px solid var(--muted); border-radius: 999px; padding: 0 7px; white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) { .lvl { transition: none; } }
+@media (max-width: 900px) {
+  .sys-grid, .evidence { grid-template-columns: minmax(0, 1fr); }
+  .preset-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .bench, .results, .closing { grid-template-columns: minmax(0, 1fr); }
+  .stage { order: -1; }
+  .readouts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  .readouts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bar-row { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+}
+</style>
+
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Pendamping slide 12, 14, dan 15</p>
+    <h1>Simulator Imersi TIS</h1>
+    <div class="modes" aria-label="Mode simulator">
+      <button type="button" id="tab-siklus" aria-pressed="true">Siklus imersi</button>
+      <button type="button" id="tab-sistem" aria-pressed="false">Bandingkan sistem</button>
+    </div>
+  </header>
+
+  <div class="mode" id="mode-siklus">
+    <p class="lead">Atur siklus rendam dan kering pada bioreaktor PlantForm. Hasil biologis hanya muncul untuk kombinasi yang benar-benar diuji pada tunas <i>Salvia viridis</i> oleh Grzegorczyk-Karolak dkk. (2022).</p>
+
+  <section class="presets" aria-labelledby="h-preset">
+    <h2 id="h-preset">Perlakuan dalam jurnal</h2>
+    <div class="preset-row" id="presets"></div>
+  </section>
+
+  <section class="bench" aria-label="Pengaturan dan bioreaktor">
+    <form class="controls" id="form" onsubmit="return false">
+      <p class="status" id="status" role="status"></p>
+
+      <div class="field">
+        <div class="field-head"><label for="durasi">Durasi imersi</label><output id="durasi-out" for="durasi"></output></div>
+        <input type="range" id="durasi" min="1" max="30" step="1" value="10" aria-describedby="durasi-hint">
+        <div class="ticks" data-for="durasi"></div>
+        <p class="small" id="durasi-hint">Jurnal hanya menguji 10 menit.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-head"><label for="jeda">Intensitas imersi</label><output id="jeda-out" for="jeda"></output></div>
+        <input type="range" id="jeda" min="20" max="360" step="10" value="80" aria-describedby="jeda-hint">
+        <div class="ticks" data-for="jeda"></div>
+        <p class="small" id="jeda-hint">Diatur lewat jeda kering antar imersi. Jeda pendek berarti lebih sering direndam. Jurnal menguji 80 dan 170 menit.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-head"><label for="volume">Volume media awal</label><output id="volume-out" for="volume"></output></div>
+        <input type="range" id="volume" min="300" max="800" step="10" value="500" aria-describedby="volume-hint">
+        <div class="ticks" data-for="volume"></div>
+        <p class="small" id="volume-hint">Jurnal memakai 500 mL untuk batch dan 450 mL untuk fed-batch.</p>
+      </div>
+
+      <fieldset>
+        <legend>Mode kultur</legend>
+        <div class="seg">
+          <label><input type="radio" name="mode" id="mode-batch" value="batch" checked>Batch</label>
+          <label><input type="radio" name="mode" id="mode-fed" value="fed">Fed-batch, +300 mL di minggu ke-2</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Waktu panen</legend>
+        <div class="seg">
+          <label><input type="radio" name="panen" id="panen-2" value="2">2 minggu</label>
+          <label><input type="radio" name="panen" id="panen-3" value="3" checked>3 minggu</label>
+          <label><input type="radio" name="panen" id="panen-4" value="4">4 minggu</label>
+        </div>
+      </fieldset>
+    </form>
+
+    <div class="stage">
+      <div class="stage-top">
+        <span class="phase dry" id="phase">Fase aerasi</span>
+        <span class="clock" id="clock"></span>
+        <button type="button" class="play" id="play">Jeda animasi</button>
+      </div>
+      <svg id="reaktor" viewBox="0 0 480 278" role="img" aria-label="Skema bioreaktor PlantForm. Saat fase imersi, udara mendorong medium naik merendam tunas. Saat fase aerasi, medium turun kembali ke reservoir.">
+        <defs><clipPath id="clip-bejana"><rect x="110" y="34" width="300" height="232" rx="16"/></clipPath></defs>
+        <rect class="glass" x="110" y="34" width="300" height="232" rx="16"/>
+        <g clip-path="url(#clip-bejana)"><rect class="medium" id="medium" x="110" y="210" width="300" height="60"/></g>
+        <line class="basket" x1="124" y1="176" x2="396" y2="176"/>
+        <g id="tunas"></g>
+        <rect class="vessel" x="110" y="34" width="300" height="232" rx="16"/>
+        <path class="pipe" id="pipa" d="M72 240 H100"/>
+        <path class="arrow" id="panah" d="M98 230 L112 240 L98 250 Z"/>
+        <rect class="unit" x="6" y="222" width="66" height="36" rx="6"/>
+        <text x="39" y="245" text-anchor="middle">Udara</text>
+        <path class="pipe" d="M372 34 V16 H392"/>
+        <rect class="unit" x="392" y="6" width="84" height="22" rx="4"/>
+        <text x="434" y="22" text-anchor="middle" style="font-size:13px">Filter 0,2 µm</text>
+        <text x="396" y="195" text-anchor="end">Penyangga eksplan</text>
+        <text id="label-medium" x="260" y="254" text-anchor="middle"></text>
+      </svg>
+      <div class="strip-wrap">
+        <div class="strip" id="strip" role="img" aria-label="Pola imersi selama 24 jam"></div>
+        <div class="axis" aria-hidden="true"><span style="left:0">0 jam</span><span style="left:25%">6</span><span style="left:50%">12</span><span style="left:75%">18</span><span style="left:100%">24 jam</span></div>
+        <div class="keys"><span><i class="swatch" style="background:var(--wet)"></i>Terendam</span><span><i class="swatch" style="background:var(--air-soft);outline:1px solid var(--line)"></i>Aerasi</span><span>Animasi dipercepat: 1 jam kultur = 3 detik</span></div>
+      </div>
+      <dl class="readouts" id="readouts" aria-label="Perhitungan dari pengaturan"></dl>
+    </div>
+  </section>
+
+  <section class="results">
+    <article class="hasil" id="hasil" aria-live="polite"></article>
+    <div class="compare">
+      <div class="compare-head">
+        <h2>Bandingkan kelima perlakuan</h2>
+        <div class="metric"><label for="metrik">Metrik</label><select id="metrik"></select></div>
+      </div>
+      <p class="small" id="metrik-note"></p>
+      <div class="bars" id="bars"></div>
+      <p class="detail" id="detail"></p>
+      <div class="keys"><span><i class="swatch" style="background:var(--wet)"></i>Dilaporkan artikel</span><span><i class="swatch calc"></i>≈ Dihitung dari angka artikel</span><span id="tukey-key"></span></div>
+      <details>
+        <summary>Lihat tabel lengkap</summary>
+        <div class="table-box"><table id="tabel"></table></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div>
+      <h2>Pertanyaan untuk kelas</h2>
+      <ol>
+        <li>Pilih D, lalu E. Hanya jeda yang berubah, dari 80 ke 170 menit. Metrik mana yang turun, dan mana yang hampir tidak berubah?</li>
+        <li>Buka metrik Total fenol per siklus, lalu Produktivitas. Mengapa D unggul pada yang pertama, tetapi B unggul pada yang kedua?</li>
+        <li>Ubah durasi imersi menjadi 20 menit. Apa yang masih bisa dihitung, dan apa yang tidak bisa disimpulkan dari jurnal ini? Rancang satu perlakuan untuk menjawabnya.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>Cara membaca angka</h2>
+      <ul>
+        <li><b>Durasi imersi</b> selalu 10 menit. Artikel tidak menguji nilai lain.</li>
+        <li><b>Jeda 170 menit</b> hanya diuji pada fed-batch 4 minggu, jadi efeknya hanya terbaca dari D dan E.</li>
+        <li><b>Volume awal</b> 450 dan 500 mL selalu berpasangan dengan mode kultur, jadi efek volume tidak terpisah dari efek penambahan medium.</li>
+        <li><b>"Tiap 80 menit"</b> dibaca sebagai jeda kering. Artikel menyebut frekuensi menjadi setengahnya pada 170 menit, dan itu pas bila satu siklus 90 dan 180 menit (16 dan 8 kali per hari). Bila dihitung dari awal imersi ke awal imersi berikutnya, hasilnya 18 dan 8,5 kali per hari.</li>
+        <li><b>Medium per tunas</b> memakai inokulum 18 tunas. Skema bioreaktor tidak berskala.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="source">
+    Sumber data: Grzegorczyk-Karolak I, Staniewska P, Lebelt L, Piotrowska DG. 2022. Optimization of cultivation conditions of <i>Salvia viridis</i> L. shoots in the Plantform bioreactor to increase polyphenol production. <i>Plant Cell, Tissue and Organ Culture</i> 149:269–280. <a href="https://doi.org/10.1007/s11240-021-02168-2">doi:10.1007/s11240-021-02168-2</a>. Lisensi CC BY 4.0; data diringkas dan sebagian dihitung ulang untuk kuliah.
+  </footer>
+  </div>
+
+  <div class="mode" id="mode-sistem" hidden>
+    <p class="lead">Lihat cara RITA, SETIS, dan PlantForm memindahkan medium, lalu baca hasil ujinya. Weremczuk-Jeżyna dkk. (2020) menguji RITA dan PlantForm, tetapi tidak menguji SETIS. Data SETIS datang dari dua studi lain, jadi setiap pasangan dibaca dalam ujinya sendiri.</p>
+
+    <section class="designs" aria-labelledby="h-desain">
+      <div class="section-head">
+        <h2 id="h-desain">Cara medium berpindah</h2>
+        <div class="phase-ctl">
+          <div class="seg" role="radiogroup" aria-label="Fase siklus">
+            <label><input type="radio" name="fase" id="fase-kering" value="kering" checked>Fase aerasi</label>
+            <label><input type="radio" name="fase" id="fase-basah" value="basah">Fase imersi</label>
+          </div>
+          <button type="button" class="play" id="sys-play">Putar otomatis</button>
+        </div>
+      </div>
+
+      <div class="sys-grid" id="sys-grid">
+        <article class="sys">
+          <h3 class="sys-name a">RITA</h3>
+          <svg viewBox="0 0 260 200" role="img" aria-label="Skema RITA: satu wadah dengan ruang kultur di atas dan reservoir di bawah. Udara dari bawah mendorong medium naik ke ruang kultur.">
+            <defs><clipPath id="c-rita"><rect x="70" y="20" width="120" height="165" rx="12"/></clipPath></defs>
+            <rect class="glass" x="70" y="20" width="120" height="165" rx="12"/>
+            <g clip-path="url(#c-rita)"><rect class="medium lvl" style="--shift:-84px" x="70" y="140" width="120" height="150"/></g>
+            <line class="basket" x1="78" y1="122" x2="182" y2="122"/>
+            <g class="shoots" data-x="92,118,144,170" data-base="122"></g>
+            <rect class="vessel" x="70" y="20" width="120" height="165" rx="12"/>
+            <path class="pipe air" d="M12 165 H60"/><path class="arrow air" d="M56 157 L70 165 L56 173 Z"/>
+            <text x="12" y="153">Udara</text>
+            <text x="198" y="70">Ruang</text><text x="198" y="84">kultur</text>
+            <text x="198" y="164">Reservoir</text>
+          </svg>
+          <dl class="rows">
+            <div><dt>Wadah</dt><dd>Satu, dua kompartemen</dd></div>
+            <div><dt>Gerak medium</dt><dd>Naik dari reservoir di bawah kultur</dd></div>
+            <div><dt>Ventilasi</dt><dd>Pasif</dd></div>
+            <div><dt>Medium pada uji</dt><dd>250 mL</dd></div>
+          </dl>
+        </article>
+
+        <article class="sys">
+          <h3 class="sys-name b">SETIS</h3>
+          <svg viewBox="0 0 260 200" role="img" aria-label="Skema SETIS: dua wadah terpisah yang dihubungkan selang. Udara menekan wadah medium sehingga medium pindah ke wadah kultur.">
+            <defs>
+              <clipPath id="c-setis-k"><rect x="16" y="34" width="124" height="136" rx="12"/></clipPath>
+              <clipPath id="c-setis-m"><rect x="162" y="66" width="80" height="104" rx="10"/></clipPath>
+            </defs>
+            <rect class="glass" x="16" y="34" width="124" height="136" rx="12"/>
+            <rect class="glass" x="162" y="66" width="80" height="104" rx="10"/>
+            <g clip-path="url(#c-setis-k)"><rect class="medium lvl" style="--shift:-112px" x="16" y="172" width="124" height="150"/></g>
+            <g clip-path="url(#c-setis-m)"><rect class="medium lvl" style="--shift:72px" x="162" y="84" width="80" height="100"/></g>
+            <line class="basket" x1="24" y1="132" x2="132" y2="132"/>
+            <g class="shoots" data-x="40,66,92,118" data-base="132"></g>
+            <rect class="vessel" x="16" y="34" width="124" height="136" rx="12"/>
+            <rect class="vessel" x="162" y="66" width="80" height="104" rx="10"/>
+            <path class="pipe wet-line" d="M202 170 V186 H78 V170"/>
+            <path class="pipe air" d="M226 16 V58"/><path class="arrow air" d="M218 54 L226 68 L234 54 Z"/>
+            <text x="178" y="24">Udara</text>
+            <text x="78" y="24" text-anchor="middle">Wadah kultur</text>
+            <text x="202" y="124" text-anchor="middle" class="on-medium">Wadah</text><text x="202" y="138" text-anchor="middle" class="on-medium">medium</text>
+          </svg>
+          <dl class="rows">
+            <div><dt>Wadah</dt><dd>Dua, dihubungkan selang</dd></div>
+            <div><dt>Gerak medium</dt><dd>Ebb-and-flow antarwadah</dd></div>
+            <div><dt>Ventilasi</dt><dd>Minimal, saat imersi</dd></div>
+            <div><dt>Medium pada uji</dt><dd>1.000 mL</dd></div>
+          </dl>
+        </article>
+
+        <article class="sys">
+          <h3 class="sys-name c">PlantForm</h3>
+          <svg viewBox="0 0 260 200" role="img" aria-label="Skema PlantForm: satu wadah lebar dengan keranjang eksplan. Udara mendorong medium dari ruang bawah. Saat aerasi, udara dialirkan melalui ruang atas.">
+            <defs><clipPath id="c-plant"><rect x="26" y="46" width="208" height="134" rx="12"/></clipPath></defs>
+            <rect class="glass" x="26" y="46" width="208" height="134" rx="12"/>
+            <g clip-path="url(#c-plant)"><rect class="medium lvl" style="--shift:-76px" x="26" y="148" width="208" height="120"/></g>
+            <line class="basket" x1="36" y1="130" x2="224" y2="130"/>
+            <g class="shoots" data-x="56,88,120,152,184,212" data-base="130"></g>
+            <rect class="vessel" x="26" y="46" width="208" height="134" rx="12"/>
+            <path class="pipe air" d="M0 166 H16"/><path class="arrow air" d="M12 158 L26 166 L12 174 Z"/>
+            <path class="pipe vent" d="M72 22 V62"/><path class="arrow vent" d="M64 58 L72 72 L80 58 Z"/>
+            <path class="pipe vent" d="M188 72 V34"/><path class="arrow vent" d="M180 36 L188 22 L196 36 Z"/>
+            <text x="130" y="30" text-anchor="middle">Ventilasi paksa</text>
+            <text x="0" y="195">Udara</text>
+          </svg>
+          <dl class="rows">
+            <div><dt>Wadah</dt><dd>Satu, dengan keranjang eksplan</dd></div>
+            <div><dt>Gerak medium</dt><dd>Naik dari ruang bawah</dd></div>
+            <div><dt>Ventilasi</dt><dd>Paksa, 15 menit tiap 4 jam pada uji murad</dd></div>
+            <div><dt>Medium pada uji</dt><dd>500 mL</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="small">Skema tidak berskala. Bagian yang menyala menunjukkan aliran udara pada fase terpilih.</p>
+    </section>
+
+    <section class="evidence">
+      <div class="pairs">
+        <h2>Uji berpasangan</h2>
+        <p class="small">Tiap garis adalah satu studi. Pilih garis untuk membuka datanya.</p>
+        <svg id="segitiga" viewBox="0 0 300 186" role="img" aria-label="Segitiga tiga sistem. RITA dan PlantForm diuji pada Dracocephalum, RITA dan SETIS pada tebu, PlantForm dan SETIS pada murad.">
+          <g class="edge" data-study="s2"><line class="hit" x1="60" y1="34" x2="240" y2="34"/><line class="stroke" x1="60" y1="34" x2="240" y2="34"/></g>
+          <g class="edge" data-study="s1"><line class="hit" x1="60" y1="34" x2="150" y2="152"/><line class="stroke" x1="60" y1="34" x2="150" y2="152"/></g>
+          <g class="edge" data-study="s3"><line class="hit" x1="240" y1="34" x2="150" y2="152"/><line class="stroke" x1="240" y1="34" x2="150" y2="152"/></g>
+          <text x="150" y="26" text-anchor="middle">Tebu</text>
+          <text x="86" y="108" text-anchor="end">Dracocephalum</text>
+          <text x="214" y="108">Murad</text>
+          <g class="node a"><rect x="26" y="18" width="68" height="32" rx="6"/><text x="60" y="39" text-anchor="middle">RITA</text></g>
+          <g class="node b"><rect x="206" y="18" width="68" height="32" rx="6"/><text x="240" y="39" text-anchor="middle">SETIS</text></g>
+          <g class="node c"><rect x="106" y="136" width="88" height="32" rx="6"/><text x="150" y="157" text-anchor="middle">PlantForm</text></g>
+        </svg>
+        <div class="study-btns" id="study-btns"></div>
+      </div>
+
+      <div class="study">
+        <h3 id="study-title"></h3>
+        <p id="study-summary"></p>
+        <dl class="rows" id="study-cond"></dl>
+        <div class="metric"><label for="sys-metrik">Metrik</label><select id="sys-metrik"></select></div>
+        <p class="small" id="sys-note"></p>
+        <div class="bars" id="sys-bars"></div>
+        <div class="keys"><span><i class="swatch" style="background:var(--mark)"></i>Sistem pembanding lain</span><span><i class="swatch calc"></i>≈ Dihitung dari angka artikel</span><span id="sys-letters"></span></div>
+        <details>
+          <summary>Lihat tabel lengkap uji ini</summary>
+          <div class="table-box"><table id="sys-tabel"></table></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div>
+        <h2>Pertanyaan untuk kelas</h2>
+        <ol>
+          <li>Buka RITA × PlantForm. Bandingkan Tunas per bioreaktor dengan Tunas per liter medium. Mengapa sistem teratasnya berganti?</li>
+          <li>RITA melampaui SETIS pada tebu, dan SETIS melampaui PlantForm pada murad. Bolehkah disimpulkan RITA lebih baik daripada PlantForm pada murad? Apa saja yang berbeda antaruji?</li>
+          <li>SETIS memakai 1.000 mL dan PlantForm 500 mL pada uji murad. Apa yang tidak bisa dipisahkan dari efek desain wadah? Rancang satu uji yang memisahkannya.</li>
+        </ol>
+      </div>
+      <div>
+        <h2>Cara membaca angka</h2>
+        <ul>
+          <li><b>Belum ditemukan satu studi</b> yang menguji RITA, SETIS, dan PlantForm sekaligus. Spesies, rezim imersi, volume, dan metrik tiap uji berbeda.</li>
+          <li><b>Data tebu</b> hanya berasal dari abstrak karena artikelnya berbayar. Rezim imersi dan uji statistiknya belum terbaca.</li>
+          <li><b>SETIS bergantung konteks.</b> Nilainya terendah dari tiga TIS pada tebu, tetapi tertinggi pada talas: 36,0 tunas/eksplan, dibanding TIB 21,7 dan ebb-and-flow 20,0 (Mancilla-Álvarez dkk. 2021).</li>
+          <li><b>Data murad</b> diambil dari teks artikel. Sebagian isi tabel tidak tersedia, jadi beberapa baris ditandai tanpa angka.</li>
+          <li><b>Satuan RGR</b> mengikuti label artikel. Rumus yang dipakai sebenarnya menghasilkan persen per hari.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="source">
+      Sumber data: Weremczuk-Jeżyna I, Lisiecki P, Gonciarz W, dkk. 2020. <i>Molecules</i> 25:4533. <a href="https://doi.org/10.3390/molecules25194533">doi:10.3390/molecules25194533</a>. Orozco-Ortiz C, Sánchez L, Araya-Mattey J, dkk. 2023. <i>Plant Cell, Tissue and Organ Culture</i> 152:115–128. <a href="https://doi.org/10.1007/s11240-022-02392-4">doi:10.1007/s11240-022-02392-4</a>. Tarraf W, De Carlo A, Ieri F, Cencetti G, Benelli C. 2026. <i>Agriculture</i> 16:1901. <a href="https://doi.org/10.3390/agriculture16171901">doi:10.3390/agriculture16171901</a>. Mancilla-Álvarez E, dkk. 2021. <i>Plants</i> 10:1010. <a href="https://doi.org/10.3390/plants10051010">doi:10.3390/plants10051010</a>. Desain wadah: De Carlo dkk. 2021 <a href="https://doi.org/10.3390/agronomy11122414">doi:10.3390/agronomy11122414</a>; Murthy dkk. 2023 <a href="https://doi.org/10.3389/fpls.2023.1159588">doi:10.3389/fpls.2023.1159588</a>; Grzegorczyk-Karolak dkk. 2022.
+    </footer>
+  </div>
+</main>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const nf = (v, d = 0) => v.toLocaleString("id-ID", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const auto = (v) => { const r = Math.round(v * 10) / 10; return nf(r, Number.isInteger(r) ? 0 : 1); };
+  const seText = (se) => nf(se, se === .5 ? 1 : 2); // Tabel 1 mencetak 23,0 ± 0,5
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
+
+  // Data Tabel 1 dan teks artikel. rep = dilaporkan, calc = dihitung dari angka artikel.
+  const dwB = 74.8 / 29.7, dwE = 37.6 / 10.03;
+  const TREAT = [
+    { id: "A", mode: "batch", panen: 2, v0: 500, jeda: 80, title: "Batch, panen minggu ke-2", short: "batch 2 minggu", sub: "500 mL, jeda 80 menit",
+      prol: 8.2, dw: [1.38, "rep"], cyc: [19.3 * 1.38, "calc"], tp: [19.3, .36, "c"], ra: [13.40, .21, "b"], vb: [3.47, .08, "d"],
+      note: "Sebagian besar eksplan membentuk tunas atau kuncup; 23% strukturnya berupa tunas." },
+    { id: "B", mode: "batch", panen: 3, v0: 500, jeda: 80, title: "Batch, panen minggu ke-3", short: "batch 3 minggu", sub: "500 mL, jeda 80 menit",
+      prol: 8.9, dw: [dwB, "calc"], cyc: [74.8, "rep"], tp: [29.7, 1.27, "a"], ra: [16.57, .68, "a"], vb: [9.80, .43, "a"],
+      note: "Biomassa berlipat dua dibanding minggu ke-2. Daun bawah mulai menggelap di akhir minggu ke-3, dan kultur batch tidak dapat diperpanjang." },
+    { id: "C", mode: "fed", panen: 3, v0: 450, jeda: 80, title: "Fed-batch, panen minggu ke-3", short: "fed-batch 3 minggu", sub: "450 + 300 mL, jeda 80 menit",
+      prol: 13.4, dw: [dwB * 1.18, "calc"], cyc: [14.3 * dwB * 1.18, "calc"], tp: [14.3, .36, "e"], ra: [6.86, .15, "e"], vb: [5.10, .12, "c"],
+      note: "Kultur tumbuh aktif tanpa nekrosis dan proliferasi naik, tetapi kandungan fenol paling rendah." },
+    { id: "D", mode: "fed", panen: 4, v0: 450, jeda: 80, title: "Fed-batch, panen minggu ke-4", short: "fed-batch 4 minggu", sub: "450 + 300 mL, jeda 80 menit",
+      prol: 18.6, dw: [3.51, "rep"], cyc: [80.8, "rep"], tp: [23.0, .5, "b"], ra: [11.57, .21, "c"], vb: [8.68, .22, "b"],
+      note: "Proliferasi tertinggi dan tunas utama melebihi 10 cm. Tunas menua dan menggelap di akhir periode." },
+    { id: "E", mode: "fed", panen: 4, v0: 450, jeda: 170, title: "Fed-batch, panen minggu ke-4, jeda 170 menit", short: "seperti D, jeda 170", sub: "450 + 300 mL, jeda 170 menit",
+      prol: null, dw: [dwE, "calc"], cyc: [17.3 * dwE, "calc"], tp: [17.3, .32, "d"], ra: [10.03, .16, "d"], vb: [5.50, .08, "c"],
+      note: "Dibanding D, tunas lebih sedikit dan tunas utama lebih pendek, tetapi bobot sedikit lebih tinggi. Daun menggelap lebih awal, dengan proses lebih lambat dan lebih ringan." },
+  ];
+  const IMM = 10, SHOOTS = 18, ADD = 300;
+  const totalMl = (v0, mode, panen) => v0 + (mode === "fed" && panen > 2 ? ADD : 0);
+  TREAT.forEach((t) => { t.prod = [t.cyc[0] / (totalMl(t.v0, t.mode, t.panen) / 1000) / t.panen, "calc"]; });
+
+  const METRICS = [
+    { key: "tp", name: "Total fenol", unit: "mg/g DW", d: 1, note: "Jumlah enam asam fenolat dan empat feniletanoid (Tabel 1). DW = bobot kering.", get: (t) => ({ v: t.tp[0], se: t.tp[1], l: t.tp[2], src: "rep" }) },
+    { key: "ra", name: "Asam rosmarinat", unit: "mg/g DW", d: 2, note: "Fenolat utama pada semua perlakuan (Tabel 1).", get: (t) => ({ v: t.ra[0], se: t.ra[1], l: t.ra[2], src: "rep" }) },
+    { key: "vb", name: "Verbaskosida", unit: "mg/g DW", d: 2, note: "Feniletanoid utama pada semua perlakuan (Tabel 1).", get: (t) => ({ v: t.vb[0], se: t.vb[1], l: t.vb[2], src: "rep" }) },
+    { key: "prol", name: "Rasio proliferasi", unit: "tunas/eksplan", d: 1, note: "Angka E hanya tampil sebagai batang pada Gbr. 2A; teks menyebut nilainya lebih rendah dari D.", get: (t) => (t.prol === null ? null : { v: t.prol, src: "rep" }) },
+    { key: "dw", name: "Bobot kering", unit: "g/kultur", d: 2, note: "A dan D dilaporkan. B = 74,8 mg ÷ 29,7 mg/g. C = B × 1,18. E = 37,6 mg asam rosmarinat ÷ 10,03 mg/g.", get: (t) => ({ v: t.dw[0], src: t.dw[1] }) },
+    { key: "cyc", name: "Total fenol per siklus kultur", unit: "mg", d: 1, note: "B dan D dilaporkan. A, C, dan E = kandungan × bobot kering. Perbedaan B dan D tidak signifikan.", get: (t) => ({ v: t.cyc[0], src: t.cyc[1] }) },
+    { key: "prod", name: "Produktivitas", unit: "mg/L/minggu", d: 1, note: "Total fenol per siklus ÷ medium total ÷ lama kultur. Dihitung untuk kuliah ini, bukan dilaporkan artikel.", get: (t) => ({ v: t.prod[0], src: t.prod[1] }) },
+  ];
+
+  const state = { imm: 10, jeda: 80, v0: 500, mode: "batch", panen: 3, metric: "tp" };
+  const matched = () => TREAT.find((t) => state.imm === IMM && t.jeda === state.jeda && t.v0 === state.v0 && t.mode === state.mode && t.panen === state.panen) || null;
+  const nearest = () => {
+    let best = TREAT[0], score = Infinity;
+    TREAT.forEach((t) => {
+      const s = Math.abs(state.imm - IMM) / 29 + Math.abs(state.jeda - t.jeda) / 340 + Math.abs(state.v0 - t.v0) / 500 + (state.mode === t.mode ? 0 : .5) + Math.abs(state.panen - t.panen) * .25;
+      if (s < score) { score = s; best = t; }
+    });
+    return best;
+  };
+
+  // Perlakuan
+  TREAT.forEach((t) => {
+    const b = el("button", "preset");
+    b.type = "button"; b.id = "preset-" + t.id; b.setAttribute("aria-pressed", "false");
+    b.append(el("b", "", t.id), el("span", "", t.short[0].toUpperCase() + t.short.slice(1)), el("small", "", t.sub));
+    b.addEventListener("click", () => apply(t));
+    $("presets").append(b);
+  });
+  function apply(t) {
+    Object.assign(state, { imm: IMM, jeda: t.jeda, v0: t.v0, mode: t.mode, panen: t.panen });
+    $("durasi").value = IMM; $("jeda").value = t.jeda; $("volume").value = t.v0;
+    $("mode-" + t.mode).checked = true; $("panen-" + t.panen).checked = true;
+    render();
+  }
+
+  // Penanda nilai jurnal pada slider
+  const TICKS = { durasi: [10], jeda: [80, 170], volume: [450, 500] };
+  document.querySelectorAll(".ticks").forEach((box) => {
+    const input = $(box.dataset.for), min = +input.min, max = +input.max;
+    TICKS[box.dataset.for].forEach((v) => {
+      const p = (v - min) / (max - min), b = el("button", "tick", String(v));
+      b.type = "button"; b.setAttribute("aria-label", "Pakai nilai jurnal " + v);
+      b.style.left = `calc(${p * 100}% + ${(0.5 - p) * 20}px)`;
+      b.addEventListener("click", () => { input.value = v; read(); });
+      box.append(b);
+    });
+  });
+
+  function read() {
+    state.imm = +$("durasi").value; state.jeda = +$("jeda").value; state.v0 = +$("volume").value;
+    state.mode = document.querySelector('input[name="mode"]:checked').value;
+    state.panen = +document.querySelector('input[name="panen"]:checked').value;
+    render();
+  }
+  $("form").addEventListener("input", read);
+
+  // Tunas pada skema
+  const NS = "http://www.w3.org/2000/svg", tunas = $("tunas");
+  [140, 174, 208, 242, 276, 310, 344, 378].forEach((x, i) => {
+    const h = 54 + (i * 7) % 18;
+    const stem = document.createElementNS(NS, "line");
+    stem.setAttribute("class", "stem");
+    stem.setAttribute("x1", x); stem.setAttribute("x2", x); stem.setAttribute("y1", 176); stem.setAttribute("y2", 176 - h);
+    tunas.append(stem);
+    for (let k = 0; k < 3; k++) [-1, 1].forEach((dir) => {
+      const leaf = document.createElementNS(NS, "ellipse"), ly = 176 - h + 8 + k * 17;
+      leaf.setAttribute("class", "leaf");
+      leaf.setAttribute("cx", x + dir * 9); leaf.setAttribute("cy", ly); leaf.setAttribute("rx", 9); leaf.setAttribute("ry", 4);
+      leaf.setAttribute("transform", `rotate(${dir * -22} ${x + dir * 9} ${ly})`);
+      tunas.append(leaf);
+    });
+  });
+
+  function renderStrip() {
+    const strip = $("strip"), cycle = state.imm + state.jeda;
+    strip.replaceChildren();
+    for (let start = 0; start < 1440; start += cycle) {
+      const i = document.createElement("i");
+      i.style.left = (start / 1440 * 100) + "%";
+      i.style.width = (Math.min(state.imm, 1440 - start) / 1440 * 100) + "%";
+      strip.append(i);
+    }
+    playhead = el("i", "head");
+    strip.append(playhead);
+    strip.setAttribute("aria-label", `Pola imersi 24 jam: ${auto(1440 / cycle)} siklus, masing-masing ${state.imm} menit terendam`);
+  }
+
+  function renderReadouts() {
+    const cycle = state.imm + state.jeda, perDay = 1440 / cycle, minDay = perDay * state.imm;
+    const h = Math.floor(minDay / 60), m = Math.round(minDay - h * 60);
+    const days = state.panen * 7, total = totalMl(state.v0, state.mode, state.panen);
+    const items = [
+      ["Satu siklus", `${nf(cycle)} menit`, `${state.imm} rendam, ${state.jeda} kering`],
+      ["Siklus per hari", auto(perDay), "kali"],
+      ["Terendam per hari", h ? `${h} j ${m} m` : `${m} menit`, `${auto(minDay)} menit`],
+      ["Porsi waktu terendam", nf(state.imm / cycle * 100, 1) + "%", "dari satu hari"],
+      ["Imersi sampai panen", nf(Math.floor(days * perDay)), `siklus dalam ${days} hari`],
+      ["Medium total", `${nf(total)} mL`, `${nf(total / SHOOTS, 1)} mL per tunas awal`],
+    ];
+    const box = $("readouts");
+    box.replaceChildren();
+    items.forEach(([k, v, s]) => {
+      const d = el("div"), dd = el("dd", "", v);
+      dd.append(el("small", "", s));
+      d.append(el("dt", "", k), dd);
+      box.append(d);
+    });
+  }
+
+  function renderHasil(t) {
+    const box = $("hasil");
+    box.replaceChildren();
+    if (t) {
+      const rows = el("dl", "rows");
+      const add = (k, v, unit) => { const d = el("div"), dd = el("dd", "", v); if (unit) dd.append(" ", el("small", "", unit)); d.append(el("dt", "", k), dd); rows.append(d); };
+      add("Rasio proliferasi", t.prol === null ? "Tidak ada angka" : nf(t.prol, 1), t.prol === null ? "" : "tunas/eksplan");
+      add("Bobot kering", (t.dw[1] === "calc" ? "≈ " : "") + nf(t.dw[0], 2), "g/kultur");
+      add("Total fenol", `${nf(t.tp[0], 1)} ± ${seText(t.tp[1])}`, "mg/g DW");
+      add("Asam rosmarinat", `${nf(t.ra[0], 2)} ± ${seText(t.ra[1])}`, "mg/g DW");
+      add("Verbaskosida", `${nf(t.vb[0], 2)} ± ${seText(t.vb[1])}`, "mg/g DW");
+      add("Total fenol per siklus", (t.cyc[1] === "calc" ? "≈ " : "") + nf(t.cyc[0], 1), "mg");
+      add("Produktivitas", "≈ " + nf(t.prod[0], 1), "mg/L/minggu");
+      box.append(el("span", "tag yes", "Diuji dalam jurnal"), el("h3", "", `Perlakuan ${t.id}: ${t.title}`), rows, el("p", "", t.note));
+      return;
+    }
+    const n = nearest(), ul = el("ul");
+    const dev = (s) => ul.append(el("li", "", s));
+    if (state.imm !== IMM) dev(`Durasi imersi ${state.imm} menit; jurnal hanya memakai ${IMM} menit.`);
+    if (state.jeda !== n.jeda) dev(`Jeda ${state.jeda} menit; perlakuan ${n.id} memakai ${n.jeda} menit.`);
+    if (state.v0 !== n.v0) dev(`Volume awal ${state.v0} mL; perlakuan ${n.id} memakai ${n.v0} mL.`);
+    if (state.mode !== n.mode) dev(`Mode ${state.mode === "fed" ? "fed-batch" : "batch"}; perlakuan ${n.id} memakai ${n.mode === "fed" ? "fed-batch" : "batch"}.`);
+    if (state.panen !== n.panen) dev(`Panen minggu ke-${state.panen}; perlakuan ${n.id} dipanen minggu ke-${n.panen}.`);
+    if (state.mode === "batch" && state.panen === 4) dev("Artikel menyebut kultur batch tidak dapat diperpanjang setelah minggu ke-3.");
+    if (state.jeda === 170 && !(state.mode === "fed" && state.panen === 4)) dev("Jeda 170 menit hanya diuji pada fed-batch 4 minggu.");
+    const jump = el("button", "jump", `Pakai perlakuan ${n.id}`);
+    jump.type = "button"; jump.id = "jump";
+    jump.addEventListener("click", () => apply(n));
+    box.append(el("span", "tag not", "Tidak diuji dalam jurnal"), el("h3", "", "Hasil biologis tidak tersedia"),
+      el("p", "", "Artikel tidak memberi data untuk kombinasi ini, jadi halaman ini tidak memperkirakan hasilnya. Perhitungan siklus di atas tetap berlaku."),
+      el("p", "", `Perbedaan dari perlakuan terdekat (${n.id}):`), ul, jump);
+  }
+
+  // Grafik perbandingan
+  METRICS.forEach((m) => { const o = el("option", "", m.name); o.value = m.key; $("metrik").append(o); });
+  $("metrik").addEventListener("change", (e) => { state.metric = e.target.value; renderBars(); markBars(); });
+  const metric = () => METRICS.find((m) => m.key === state.metric);
+  const valueText = (m, r) => (r.src === "calc" ? "≈ " : "") + nf(r.v, m.d);
+
+  function renderBars() {
+    const m = metric(), box = $("bars");
+    const max = Math.max(...TREAT.map((t) => { const r = m.get(t); return r ? r.v : 0; }));
+    $("metrik-note").textContent = m.note;
+    $("tukey-key").textContent = TREAT.some((t) => { const r = m.get(t); return r && r.l; }) ? "Huruf sama: tidak berbeda nyata (Tukey, p ≤ 0,05)" : "";
+    box.replaceChildren();
+    TREAT.forEach((t) => {
+      const r = m.get(t), row = el("button", "bar-row"), name = el("span", "bar-name");
+      row.type = "button"; row.dataset.id = t.id;
+      name.append(el("b", "", t.id), t.short);
+      const track = el("span", "bar-track");
+      if (r) {
+        const fill = el("span", "bar-fill" + (r.src === "calc" ? " calc" : ""));
+        fill.style.width = `calc((100% - 92px) * ${r.v / max})`;
+        const val = el("span", "bar-val", valueText(m, r));
+        if (r.l) val.append(el("small", "", r.l));
+        track.append(fill, val);
+        row.setAttribute("aria-label", `Perlakuan ${t.id}, ${t.short}: ${valueText(m, r)} ${m.unit}. Pilih perlakuan ini.`);
+      } else {
+        track.append(el("span", "bar-none", "Tidak ada angka di teks artikel"));
+        row.setAttribute("aria-label", `Perlakuan ${t.id}, ${t.short}: tidak ada angka di teks artikel. Pilih perlakuan ini.`);
+      }
+      row.append(name, track);
+      const show = () => showDetail(t);
+      row.addEventListener("pointerenter", show);
+      row.addEventListener("focus", show);
+      row.addEventListener("pointerleave", () => showDetail(matched()));
+      row.addEventListener("click", () => apply(t));
+      box.append(row);
+    });
+    showDetail(matched());
+  }
+  function showDetail(t) {
+    const m = metric(), d = $("detail");
+    if (!t) { d.textContent = `Pilih satu batang untuk melihat rincian ${m.name.toLowerCase()}.`; return; }
+    const r = m.get(t);
+    if (!r) { d.textContent = `Perlakuan ${t.id}: angka tidak tercantum di teks artikel.`; return; }
+    let s = `Perlakuan ${t.id}: ${valueText(m, r)}`;
+    if (r.se) s += ` ± ${seText(r.se)}`;
+    s += ` ${m.unit}`;
+    if (r.l) s += `, grup Tukey ${r.l}`;
+    d.textContent = s + (r.src === "calc" ? ", dihitung dari angka artikel." : ", dilaporkan artikel.");
+  }
+  function markBars() {
+    const t = matched();
+    document.querySelectorAll(".bar-row").forEach((r) => { r.dataset.on = t && r.dataset.id === t.id ? "1" : "0"; });
+  }
+
+  // Tabel lengkap
+  (() => {
+    const tbl = $("tabel"), head = el("tr"), thead = el("thead"), tbody = el("tbody");
+    head.append(el("th", "", "Metrik"));
+    TREAT.forEach((t) => head.append(el("th", "", t.id)));
+    thead.append(head);
+    METRICS.forEach((m) => {
+      const tr = el("tr");
+      tr.append(el("td", "", `${m.name} (${m.unit})`));
+      TREAT.forEach((t) => { const r = m.get(t); tr.append(el("td", "", r ? valueText(m, r) : "–")); });
+      tbody.append(tr);
+    });
+    tbl.append(thead, tbody);
+  })();
+
+  function render() {
+    const t = matched(), cycle = state.imm + state.jeda;
+    $("durasi-out").textContent = `${state.imm} menit`;
+    $("jeda-out").textContent = `${state.jeda} menit, ${auto(1440 / cycle)} kali/hari`;
+    $("volume-out").textContent = `${nf(state.v0)} mL`;
+    $("durasi").setAttribute("aria-valuetext", `${state.imm} menit`);
+    $("jeda").setAttribute("aria-valuetext", `${state.jeda} menit`);
+    $("volume").setAttribute("aria-valuetext", `${state.v0} mililiter`);
+    const st = $("status");
+    st.replaceChildren();
+    const icon = document.createElementNS(NS, "svg"), c = document.createElementNS(NS, "circle");
+    icon.setAttribute("viewBox", "0 0 18 18"); icon.setAttribute("aria-hidden", "true");
+    c.setAttribute("cx", 9); c.setAttribute("cy", 9); c.setAttribute("r", 7); c.setAttribute("class", t ? "ok" : "no");
+    icon.append(c);
+    st.append(icon, t ? `Sama dengan perlakuan ${t.id} di jurnal` : "Kombinasi ini tidak diuji di jurnal");
+    TREAT.forEach((x) => $("preset-" + x.id).setAttribute("aria-pressed", x === t ? "true" : "false"));
+    $("label-medium").textContent = `${nf(state.v0)} mL medium`;
+    renderStrip(); renderReadouts(); renderHasil(t); markBars(); showDetail(t);
+    drawFrame();
+  }
+
+  // Animasi: 1 menit kultur = 50 ms
+  const MS_PER_MIN = 50, LEVEL_HIGH = 92;
+  let simMin = 30, level = 210, last = 0, wetUntil = 0, playing = false, playhead = null;
+  const lowLevel = () => 258 - (16 + (state.v0 - 300) / 500 * 44);
+  function drawFrame(dt = 0, now = performance.now()) {
+    const cycle = state.imm + state.jeda, inCycle = simMin % cycle, wet = inCycle < state.imm;
+    if (wet) wetUntil = Math.max(wetUntil, now + 420);
+    const showWet = wet || now < wetUntil;
+    const target = showWet ? LEVEL_HIGH : lowLevel();
+    if (dt) level += (target - level) * Math.min(1, dt / 130); else if (!playing) level = target;
+    $("medium").setAttribute("y", level.toFixed(1));
+    $("medium").setAttribute("height", (270 - level).toFixed(1));
+    const p = $("phase");
+    p.textContent = wet ? "Fase imersi" : "Fase aerasi";
+    p.className = "phase " + (wet ? "wet" : "dry");
+    $("pipa").setAttribute("class", "pipe" + (wet ? " on" : ""));
+    $("panah").setAttribute("class", "arrow" + (wet ? " on" : ""));
+    const dayMin = simMin % 1440, day = Math.floor(simMin / 1440) + 1;
+    $("clock").textContent = `Hari ${day}, pukul ${String(Math.floor(dayMin / 60)).padStart(2, "0")}.${String(Math.floor(dayMin % 60)).padStart(2, "0")}`;
+    if (playhead) playhead.style.left = (dayMin / 1440 * 100) + "%";
+  }
+  function tick(now) {
+    if (!playing) return;
+    const dt = Math.min(now - last, 100);
+    last = now;
+    simMin = (simMin + dt / MS_PER_MIN) % (state.panen * 7 * 1440);
+    drawFrame(dt, now);
+    requestAnimationFrame(tick);
+  }
+  function setPlaying(on) {
+    playing = on;
+    $("play").textContent = on ? "Jeda animasi" : "Putar animasi";
+    if (on) { last = performance.now(); requestAnimationFrame(tick); }
+  }
+  $("play").addEventListener("click", () => setPlaying(!playing));
+  $("strip").addEventListener("click", (e) => {
+    const box = e.currentTarget.getBoundingClientRect();
+    const day = Math.floor(simMin / 1440);
+    simMin = day * 1440 + Math.max(0, Math.min(1, (e.clientX - box.left) / box.width)) * 1439;
+    wetUntil = 0;
+    if (!playing) { level = -1; drawFrame(); level = lowLevel(); drawFrame(); } else drawFrame();
+  });
+
+  renderBars();
+  render();
+  const calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  setPlaying(!calm);
+  let resume = !calm;
+  document.addEventListener("tis-mode", (e) => {
+    if (e.detail === "siklus") { if (resume) setPlaying(true); return; }
+    resume = playing;
+    setPlaying(false);
+  });
+})();
+</script>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const nf = (v, d = 0) => v.toLocaleString("id-ID", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
+  const italics = (node, text) => { text.split(/(\*[^*]+\*)/).filter(Boolean).forEach((p) => node.append(p[0] === "*" ? el("i", "", p.slice(1, -1)) : p)); return node; };
+
+  // Pindah mode, dapat dibuka langsung lewat #siklus atau #sistem
+  const MODES = ["siklus", "sistem"];
+  let current = null;
+  function setMode(m) {
+    if (m === current) return;
+    current = m;
+    MODES.forEach((x) => {
+      $("mode-" + x).hidden = x !== m;
+      $("tab-" + x).setAttribute("aria-pressed", x === m ? "true" : "false");
+    });
+    document.dispatchEvent(new CustomEvent("tis-mode", { detail: m }));
+  }
+  MODES.forEach((m) => $("tab-" + m).addEventListener("click", () => { setMode(m); try { location.hash = m; } catch (e) { /* tautan tetap jalan tanpa hash */ } }));
+  window.addEventListener("hashchange", () => { const m = location.hash.slice(1); if (MODES.includes(m)) setMode(m); });
+
+  // Tunas pada skema
+  const NS = "http://www.w3.org/2000/svg";
+  document.querySelectorAll(".shoots").forEach((g) => {
+    const base = +g.dataset.base;
+    g.dataset.x.split(",").forEach((sx, i) => {
+      const x = +sx, h = 36 + (i * 5) % 11;
+      const stem = document.createElementNS(NS, "line");
+      stem.setAttribute("class", "stem");
+      stem.setAttribute("x1", x); stem.setAttribute("x2", x); stem.setAttribute("y1", base); stem.setAttribute("y2", base - h);
+      g.append(stem);
+      for (let k = 0; k < 2; k++) [-1, 1].forEach((dir) => {
+        const leaf = document.createElementNS(NS, "ellipse"), ly = base - h + 7 + k * 14;
+        leaf.setAttribute("class", "leaf");
+        leaf.setAttribute("cx", x + dir * 7); leaf.setAttribute("cy", ly); leaf.setAttribute("rx", 7); leaf.setAttribute("ry", 3.2);
+        leaf.setAttribute("transform", `rotate(${dir * -22} ${x + dir * 7} ${ly})`);
+        g.append(leaf);
+      });
+    });
+  });
+
+  // Fase pada skema
+  const setWet = (wet) => { $("sys-grid").classList.toggle("wet", wet); $(wet ? "fase-basah" : "fase-kering").checked = true; };
+  document.querySelectorAll('input[name="fase"]').forEach((r) => r.addEventListener("change", () => { stopAuto(); setWet($("fase-basah").checked); }));
+  let timer = null;
+  function stopAuto() { clearInterval(timer); timer = null; $("sys-play").textContent = "Putar otomatis"; }
+  function startAuto() {
+    stopAuto();
+    timer = setInterval(() => setWet(!$("sys-grid").classList.contains("wet")), 2600);
+    $("sys-play").textContent = "Hentikan";
+  }
+  $("sys-play").addEventListener("click", () => (timer ? stopAuto() : startAuto()));
+  const calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.addEventListener("tis-mode", (e) => { if (e.detail === "sistem" && !calm) startAuto(); else stopAuto(); });
+
+  // Data uji. c = warna identitas, o = pembanding lain.
+  const SYS = {
+    rita: ["RITA", "a"], setis: ["SETIS", "b"], plant: ["PlantForm", "c"],
+    nsb: ["Sprinkle (NSB)", "o"], bit: ["BIT", "o"], elec: ["ElecTIS", "o"], semi: ["Semisolid", "o"],
+  };
+  const calc = (v) => ({ v, calc: true });
+  const STUDIES = [
+    {
+      id: "s1", pair: "RITA × PlantForm", plant: "*Dracocephalum forrestii*", cite: "Weremczuk-Jeżyna dkk. 2020",
+      title: "*Dracocephalum forrestii*, tunas transformasi",
+      summary: "RITA unggul pada pertumbuhan dan hasil per liter medium. PlantForm memberi hiperhidrisitas terendah. Reaktor sprinkle memberi kandungan asam rosmarinat tertinggi.",
+      cond: [["Lama kultur", "3 minggu"], ["Imersi", "RITA dan PlantForm 10 menit tiap 80 menit; NSB disemprot 25 detik tiap 2,5 menit"], ["Medium", "RITA 250 mL, PlantForm 500 mL, NSB 1.000 mL"], ["Eksplan", "RITA 5–7; PlantForm dan NSB 10–14 per unit"], ["Statistik", "Mann–Whitney U, p < 0,05"]],
+      systems: ["rita", "plant", "nsb"],
+      metrics: [
+        { name: "Tunas per eksplan", unit: "tunas", d: 1, best: "high", note: "Rata-rata ± SE, Tabel 1.", vals: { rita: { v: 47.6, se: "5,1" }, plant: { v: 17.02, d: 2, se: "3,1" }, nsb: { v: 69.7, se: "7,3" } } },
+        { name: "Tunas per bioreaktor", unit: "tunas", d: 0, best: "high", note: "Tabel 1 mencetak 836 untuk NSB, sedangkan abstrak menyebut 838. Jumlah eksplan per unit juga berbeda.", vals: { rita: { v: 286, se: "10,2" }, plant: { v: 204, se: "8,5" }, nsb: { v: 836, se: "26,9" } } },
+        { name: "Tunas per liter medium", unit: "tunas/L", d: 0, best: "high", note: "Tunas per bioreaktor dibagi volume medium. Dihitung untuk kuliah ini.", vals: { rita: calc(286 / .25), plant: calc(204 / .5), nsb: calc(836) } },
+        { name: "Indeks pertumbuhan, bobot segar", unit: "", d: 2, best: "high", note: "(Biomassa akhir − awal) ÷ biomassa awal. Inokulum RITA 0,5 g, PlantForm dan NSB 0,8 g bobot segar.", vals: { rita: { v: 52.06, se: "1,2" }, plant: { v: 11.89, se: "0,4" }, nsb: { v: 43.48, se: "1,2" } } },
+        { name: "Indeks pertumbuhan, bobot kering", unit: "", d: 2, best: "high", note: "Penulis menduga oksigen yang lebih sedikit saat tunas terendam di PlantForm membatasi pertumbuhan. Dugaan ini tidak diukur.", vals: { rita: { v: 55.67, se: "4,6" }, plant: { v: 8.65, se: "0,3" }, nsb: { v: 44.55, se: "0,7" } } },
+        { name: "Hiperhidrisitas", unit: "% tunas", d: 0, best: "low", note: "Makin rendah makin baik. Kultur agar pada studi sebelumnya mencapai 25%, jadi penulis tidak menganggap imersi sebagai penyebabnya.", vals: { rita: { v: 16 }, plant: { v: 5 }, nsb: { v: 24 } } },
+        { name: "Asam rosmarinat", unit: "mg/g DW", d: 2, best: "high", letters: true, note: "Senyawa utama pada semua sistem, Tabel 2. Bagian udara tanaman utuh berumur satu tahun: 3,81 mg/g DW.", vals: { rita: { v: 11.91, se: "0,1", l: "b" }, plant: { v: 8.23, se: "0,1", l: "c" }, nsb: { v: 18.35, se: "0,2", l: "a" } } },
+        { name: "Total fenol terukur", unit: "mg/g DW", d: 2, best: "high", note: "NSB dilaporkan di abstrak. RITA dan PlantForm dijumlahkan dari lima senyawa utama pada Tabel 2.", vals: { rita: calc(18.22), plant: calc(14.60), nsb: { v: 24.15 } } },
+        { name: "Total fenol per liter medium", unit: "mg/L", d: 1, best: "high", note: "RITA dan NSB dari teks artikel. PlantForm dijumlahkan dari Tabel 2. Angka asam rosmarinat PlantForm (29,64 mg/L) dua kali nilai yang tersirat oleh senyawa lain pada baris itu, jadi perlu dicek ke penulis.", vals: { rita: { v: 239.5 }, plant: calc(41.14), nsb: { v: 131.5 } } },
+      ],
+    },
+    {
+      id: "s2", pair: "RITA × SETIS", plant: "Tebu", cite: "Orozco-Ortiz dkk. 2023",
+      title: "Tebu (*Saccharum* spp.), varietas LAICA 04-809",
+      summary: "RITA memberi koefisien multiplikasi tertinggi pada 50 mL/eksplan, dan SETIS terendah. Penulis tetap menyimpulkan BIT dengan 50 mL/eksplan sebagai kondisi terbaik. Hiperhidrisitas tidak teramati.",
+      cond: [["Lama kultur", "4 minggu"], ["Imersi", "Tidak tercantum di abstrak"], ["Medium", "10, 30, dan 50 mL per eksplan"], ["Pembanding", "BIT dan medium semisolid"], ["Akses", "Hanya abstrak; artikel berbayar"]],
+      systems: ["rita", "setis", "bit", "semi"],
+      metrics: [
+        { name: "Koefisien multiplikasi, 50 mL/eksplan", unit: "", d: 2, best: "high", note: "Sebaran RITA besar (± 11,42). Abstrak tidak menyebut apakah ± berarti SD atau SE, dan hasil uji statistiknya tidak terbaca.", vals: { rita: { v: 25.53, se: "11,42" }, setis: { v: 11.47, se: "1,27" }, bit: { v: 20.08, se: "4,1" }, semi: null } },
+        { name: "Tunas berkualitas, 30 mL/eksplan", unit: "tunas", d: 2, best: null, note: "Abstrak hanya memberi nilai tertinggi, yaitu BIT. Angka sistem lain ada di artikel lengkap.", vals: { rita: null, setis: null, bit: { v: 425.33, se: "24,58" }, semi: null } },
+      ],
+    },
+    {
+      id: "s3", pair: "PlantForm × SETIS", plant: "Murad", cite: "Tarraf dkk. 2026",
+      title: "Murad (*Myrtus communis* var. *tarentina*)",
+      summary: "SETIS unggul pada perakaran, pigmen, dan RGR hari ke-56. PlantForm sedikit lebih tinggi pada total terpen. Penulis menegaskan tidak ada sistem yang selalu lebih baik.",
+      cond: [["Lama kultur", "Proliferasi 28 dan 56 hari, perakaran 30 hari"], ["Imersi", "8 menit tiap 16 jam pada semua TIS"], ["Medium", "PlantForm 500 mL, SETIS 1.000 mL, ElecTIS 450 mL"], ["Eksplan", "50 tunas per bioreaktor"], ["Pembanding", "ElecTIS (prototipe) dan semisolid"]],
+      systems: ["plant", "setis", "elec", "semi"],
+      metrics: [
+        { name: "RGR hari ke-28", unit: "mg/g/hari", d: 1, best: "high", note: "Laju tumbuh relatif pada fase proliferasi. Semua TIS lebih tinggi dari semisolid.", vals: { plant: { v: 5.6 }, setis: { v: 6.7 }, elec: { v: 7.1 }, semi: { v: 4.6 } } },
+        { name: "RGR hari ke-56", unit: "mg/g/hari", d: 1, best: "high", note: "SETIS mempertahankan laju lebih tinggi pada subkultur kedua. Angka semisolid hanya ada di Tabel 1.", vals: { plant: { v: 4.8 }, setis: { v: 5.4 }, elec: { v: 4.7 }, semi: null } },
+        { name: "Tingkat perakaran", unit: "%", d: 0, best: "high", note: "Penulis mengaitkan hasil SETIS dengan dua wadah dan volume lebih besar. Mekanismenya tidak diuji langsung.", vals: { plant: { v: 75 }, setis: { v: 80 }, elec: { v: 50 }, semi: { v: 74 } } },
+        { name: "Panjang tunas", unit: "cm", d: 2, best: null, note: "Antar-TIS tidak berbeda nyata. Semisolid nyata lebih pendek, tanpa angka di teks.", vals: { plant: { v: 8.29, se: "0,28" }, setis: { v: 8.71, se: "0,54" }, elec: { v: 8.98, se: "0,18" }, semi: null } },
+        { name: "Panjang akar", unit: "cm", d: 2, best: null, note: "Antar-TIS tidak berbeda nyata, tetapi semuanya nyata lebih panjang dari semisolid.", vals: { plant: { v: 2.93, se: "0,26" }, setis: { v: 2.85, se: "0,26" }, elec: { v: 3.13, se: "0,22" }, semi: { v: 1.54, se: "0,11" } } },
+        { name: "Kerapatan stomata", unit: "stomata/mm²", d: 2, best: null, note: "Tidak ada arah yang otomatis lebih baik. Nilai SETIS nyata lebih tinggi dari sistem lain.", vals: { plant: { v: 209.20 }, setis: { v: 294.76 }, elec: { v: 230.94 }, semi: { v: 148.09 } } },
+        { name: "Klorofil a, fase perakaran", unit: "mg/g FW", d: 2, best: "high", note: "Semisolid dan ElecTIS dilaporkan sekitar 0,80 mg/g FW.", vals: { plant: { v: 1.03 }, setis: { v: 1.31 }, elec: { v: .80, approx: true }, semi: { v: .80, approx: true } } },
+        { name: "Karotenoid, fase perakaran", unit: "mg/g FW", d: 2, best: "high", note: "Semisolid dan ElecTIS sama-sama 0,03 mg/g FW.", vals: { plant: { v: .13 }, setis: { v: .31 }, elec: { v: .03 }, semi: { v: .03 } } },
+        { name: "Total terpen, fase perakaran", unit: "µg/g FW", d: 1, best: null, note: "Semikuantitatif, setara tridekana. Signifikansi selisih PlantForm dan SETIS tidak tercantum di teks. ElecTIS lebih rendah, tanpa angka di teks.", vals: { plant: { v: 341.5 }, setis: { v: 326.4 }, elec: null, semi: { v: 160.54, d: 2 } } },
+      ],
+    },
+  ];
+
+  const state = { study: "s1", metric: 0 };
+  const study = () => STUDIES.find((s) => s.id === state.study);
+
+  STUDIES.forEach((s) => {
+    const b = el("button", "study-btn");
+    b.type = "button"; b.id = "study-" + s.id;
+    b.append(el("b", "", s.pair));
+    b.append(italics(el("small"), `${s.plant}, ${s.cite}`));
+    b.addEventListener("click", () => pick(s.id));
+    $("study-btns").append(b);
+  });
+  document.querySelectorAll("#segitiga .edge").forEach((g) => g.addEventListener("click", () => pick(g.dataset.study)));
+
+  function pick(id) { state.study = id; state.metric = 0; renderStudy(); }
+
+  const valText = (m, r) => {
+    const t = nf(r.v, r.d ?? m.d);
+    return (r.calc || r.approx ? "≈ " : "") + t + (r.se ? ` ± ${r.se}` : "");
+  };
+
+  function renderStudy() {
+    const s = study();
+    STUDIES.forEach((x) => $("study-" + x.id).setAttribute("aria-pressed", x === s ? "true" : "false"));
+    document.querySelectorAll("#segitiga .edge").forEach((g) => g.classList.toggle("on", g.dataset.study === s.id));
+    const title = $("study-title");
+    title.replaceChildren();
+    italics(title, s.title);
+    $("study-summary").textContent = s.summary;
+    const cond = $("study-cond");
+    cond.replaceChildren();
+    s.cond.forEach(([k, v]) => { const d = el("div"); d.append(el("dt", "", k), el("dd", "", v)); cond.append(d); });
+    const sel = $("sys-metrik");
+    sel.replaceChildren();
+    s.metrics.forEach((m, i) => { const o = el("option", "", m.name); o.value = i; sel.append(o); });
+    sel.value = state.metric;
+    renderBars();
+    renderTable();
+  }
+  $("sys-metrik").addEventListener("change", (e) => { state.metric = +e.target.value; renderBars(); });
+
+  function renderBars() {
+    const s = study(), m = s.metrics[state.metric], box = $("sys-bars");
+    const rows = s.systems.map((k) => [k, m.vals[k]]);
+    const nums = rows.filter(([, r]) => r).map(([, r]) => r.v), max = Math.max(...nums);
+    const bestV = m.best === "low" ? Math.min(...nums) : max;
+    const single = nums.filter((v) => v === bestV).length === 1;
+    $("sys-note").textContent = m.note;
+    $("sys-letters").textContent = m.letters ? "Huruf berbeda: berbeda nyata (Mann–Whitney, p < 0,05)" : "";
+    box.replaceChildren();
+    rows.forEach(([k, r]) => {
+      const [nameText, c] = SYS[k], row = el("div", "bar-row static"), track = el("span", "bar-track");
+      row.append(el("span", "bar-name", nameText));
+      if (r) {
+        const fill = el("span", `bar-fill c-${c}` + (r.calc ? " calc" : ""));
+        fill.style.width = `calc((100% - 158px) * ${r.v / max})`;
+        const val = el("span", "bar-val", valText(m, r));
+        if (m.unit) val.append(el("small", "", m.unit));
+        if (r.l) val.append(el("small", "", r.l));
+        track.append(fill, val);
+        if (m.best && single && r.v === bestV) { row.dataset.on = "1"; track.append(el("span", "best", m.best === "low" ? "terendah" : "tertinggi")); }
+      } else {
+        track.append(el("span", "bar-none", s.id === "s2" ? "Tidak ada di abstrak" : "Tidak ada angka di teks"));
+      }
+      row.append(track);
+      box.append(row);
+    });
+  }
+
+  function renderTable() {
+    const s = study(), tbl = $("sys-tabel"), thead = el("thead"), tbody = el("tbody"), head = el("tr");
+    head.append(el("th", "", "Metrik"));
+    s.systems.forEach((k) => head.append(el("th", "", SYS[k][0])));
+    thead.append(head);
+    s.metrics.forEach((m) => {
+      const tr = el("tr");
+      tr.append(el("td", "", m.unit ? `${m.name} (${m.unit})` : m.name));
+      s.systems.forEach((k) => { const r = m.vals[k]; tr.append(el("td", "", r ? valText(m, r) : "–")); });
+      tbody.append(tr);
+    });
+    tbl.replaceChildren(thead, tbody);
+  }
+
+  renderStudy();
+  const start = location.hash.slice(1);
+  setMode(MODES.includes(start) ? start : "siklus");
+})();
+</script>
+
+</body></html>
