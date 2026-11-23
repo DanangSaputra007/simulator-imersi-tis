@@ -1,76 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- htmlaunch:enhanced:v2 -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22hsl(186%2C72%25%2C58%25)%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22hsl(216%2C72%25%2C44%25)%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22url(%23g)%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2246%22%20text-anchor%3D%22middle%22%20font-family%3D%22ui-sans-serif%2Csystem-ui%2C-apple-system%2CSegoe%20UI%2Csans-serif%22%20font-size%3D%2238%22%20font-weight%3D%22800%22%20fill%3D%22%23ffffff%22%3ET%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta name="theme-color" content="#7b3114">
+<meta name="description" content="Twin-Container TIS | deployed with HTMLaunch">
+<link rel="canonical" href="https://DanangSaputra007.github.io/simulator-imersi-tis/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Twin-Container TIS">
+<meta property="og:title" content="Twin-Container TIS">
+<meta property="og:description" content="Twin-Container TIS | deployed with HTMLaunch">
+<meta property="og:url" content="https://DanangSaputra007.github.io/simulator-imersi-tis/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FDanangSaputra007.github.io%2Fsimulator-imersi-tis%2F?w=1200&h=630">
+<meta property="og:image:alt" content="Twin-Container TIS">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Twin-Container TIS">
+<meta name="twitter:description" content="Twin-Container TIS | deployed with HTMLaunch">
+<meta name="twitter:image" content="https://s.wordpress.com/mshots/v1/https%3A%2F%2FDanangSaputra007.github.io%2Fsimulator-imersi-tis%2F?w=1200&h=630">
+<meta name="twitter:image:alt" content="Twin-Container TIS">
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>This site is currently offline</title>
-<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin-Container TIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;800&family=Red+Hat+Text:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root { color-scheme: dark; }
-*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, system-ui, sans-serif;
-  background: radial-gradient(ellipse at top, #12121A 0%, #08080E 70%);
-  color: #F5F5FA;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-}
-.card { width: 100%; max-width: 480px; text-align: center; }
-.status-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: #4FFFE0;
-  box-shadow: 0 0 0 4px rgba(79,255,224,0.12), 0 0 20px rgba(79,255,224,0.4);
-  margin: 0 auto 28px;
-  animation: pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 0.85; }
-  50% { opacity: 0.4; }
-}
-h1 {
-  font-size: clamp(26px, 4.5vw, 34px); font-weight: 600;
-  letter-spacing: -0.02em; margin-bottom: 14px; color: #F5F5FA;
-}
-p.lead { color: #9797A0; font-size: 15px; margin-bottom: 48px; }
-.invite {
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 34px;
-}
-.invite-title {
-  font-size: 17px; font-weight: 500;
-  color: #F5F5FA; margin-bottom: 18px;
-  letter-spacing: -0.01em;
-}
-.invite-cta {
-  display: inline-block;
-  background: #4FFFE0; color: #08080E;
-  font-weight: 600; font-size: 14px;
-  padding: 12px 24px; border-radius: 8px;
-  text-decoration: none;
-  transition: transform 0.15s ease, filter 0.15s ease;
-}
-.invite-cta:hover { transform: translateY(-1px); filter: brightness(1.08); }
-.invite-cta:focus-visible { outline: 2px solid #4FFFE0; outline-offset: 3px; }
-.footer { margin-top: 36px; font-size: 12px; color: #6B6B74; letter-spacing: 0.02em; }
-.footer a { color: #9797A0; text-decoration: none; }
-.footer a:hover { color: #F5F5FA; }
+/* VOICE everyday learning: a clear lab explainer, sibling of the RITA and TPB pages
+   IDEA two linked lab bottles on the bench, switching between the three set-ups like a lab video
+   PICTURE large animated cut-away: storage tank, culture chamber, connection tube, air ports or a pneumatic lift
+   COLOUR deep plant-green band, amber medium, sky-blue air, jacket blue, UV violet
+   TYPE Red Hat Display + Red Hat Text
+   LAYOUT laptop: vessel left, phase readout + try-it controls right, timeline beneath; phone: title, vessel, controls, readout */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0b1a14);--ink:light-dark(#10231b,#e7f0ea);--muted:light-dark(#4a5f55,#a6b8ae);--line:light-dark(#d6e0da,#24402f);--panel:light-dark(#f2f7f3,#10261d);--band:light-dark(#0f3b2c,#06201a);--bandink:#eaf5ee;--bandmuted:#b4cfc0;--amber:#f2b84b;--air:#6cc4ff;--warn:#ff9b7a;--pA:#86b49b;--pB:#6cc4ff;--pC:#f2b84b;--pD:#e0866a}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 "Red Hat Text",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Red Hat Display",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0}
+.band{padding-block:clamp(24px,3.5vw,52px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.top{background:var(--band);color:var(--bandink)}
+.top h1{font-size:clamp(28px,3.8vw,44px);text-wrap:balance}
+.top .sub{color:var(--bandmuted);margin:10px 0 0;max-width:66ch}
+.stage{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);grid-template-areas:"fig read" "fig try" "ctl ctl";gap:16px 36px;margin-top:20px;align-items:start}
+.fig{grid-area:fig;align-self:center}
+.fig svg{display:block;width:100%;height:auto}
+.fig text{font:500 19.5px "Red Hat Text",sans-serif;fill:var(--bandink)}
+.read{grid-area:read;display:flex;flex-direction:column;gap:14px;padding-top:6px}
+.ph{display:flex;align-items:center;gap:16px}
+.letter{flex:none;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font:800 32px "Red Hat Display",sans-serif;color:#0b231a;transition:background .3s}
+.ph h2{font-size:clamp(24px,2.5vw,30px)}
+.ph small{display:block;color:var(--bandmuted);font-size:14px;margin-top:4px}
+.desc{margin:10px 0 0;font-size:16px;max-width:48ch;min-height:6.2em}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(8.5em,1fr));gap:8px}
+.stat{border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 12px}
+.stat span{display:block;font-size:13px;color:var(--bandmuted)}
+.stat b{font:700 19px "Red Hat Display",sans-serif;white-space:nowrap}
+.meter{height:6px;border-radius:3px;background:rgba(255,255,255,.15);margin-top:6px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--amber);width:0}
+.try{grid-area:try;align-self:end;border-top:1px solid rgba(255,255,255,.2);padding-top:12px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px 18px}
+.try h3{grid-column:1/-1;font-size:18px}
+.try label{display:block;font-size:14px;font-weight:600}
+.try output{color:var(--amber);font-weight:700;white-space:nowrap}
+.try input[type=range]{width:100%;accent-color:var(--amber);height:28px}
+.tog{display:flex;align-items:center;gap:8px;font-size:15px;min-height:36px;cursor:pointer}
+.tog input{width:20px;height:20px;accent-color:var(--amber)}
+.warn{grid-column:1/-1;margin:0;font-size:14.5px;border-radius:8px;padding:8px 12px;background:rgba(255,155,122,.16);border:1px solid var(--warn)}
+.warn.ok{background:rgba(134,180,155,.16);border-color:var(--pA)}
+.ctl{grid-area:ctl;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+button,select{font:600 15px "Red Hat Text",sans-serif;min-height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:var(--bandink);padding:0 14px;cursor:pointer}
+button:hover,select:hover{background:rgba(255,255,255,.16)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--air);outline-offset:2px}
+#play{background:var(--amber);color:#2a1a00;border-color:var(--amber);min-width:110px}
+select option{color:#10231b}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.chip{display:flex;align-items:center;gap:8px}
+.chip i{width:12px;height:12px;border-radius:50%}
+.chip[aria-pressed=true]{background:rgba(255,255,255,.22);border-color:#fff}
+#tl{-webkit-appearance:none;appearance:none;width:100%;height:14px;border-radius:7px;cursor:pointer;margin:6px 0}
+#tl::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:4px solid var(--band);box-shadow:0 0 0 2px #fff}
+#tl::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:4px solid var(--band)}
+.ticks{display:flex;font-size:13px;color:var(--bandmuted)}
+.ticks span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.hint{font-size:13px;color:var(--bandmuted);margin:0}
+.sec h2{font-size:clamp(26px,3vw,36px);margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 22px;max-width:68ch}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.card:hover{border-color:var(--muted)}
+.card .th{background:var(--band);border-radius:10px;padding:6px}
+.card svg{display:block;width:100%;height:auto}
+.card h3{font-size:19px;display:flex;gap:8px;align-items:center}
+.card h3 i{font-style:normal;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:15px;color:#0b231a;flex:none}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.pc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.pc h3{font-size:22px;padding-bottom:8px;border-bottom:3px solid;margin-bottom:6px}
+.pc .pro h3{border-color:#2f8a5f}.pc .con h3{border-color:#d9663f}
+.pc ul{margin:0;padding:0;list-style:none}
+.pc li{padding:12px 0;border-bottom:1px solid var(--line)}
+.pc li b{display:block;font-size:17px}
+.pc li span{color:var(--muted);font-size:15px}
+.parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(14em,1fr));gap:4px 24px;margin:0;padding:0;list-style:none}
+.parts li{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.parts li i{font-style:normal;font-weight:700;width:26px;height:26px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-size:13px;flex:none}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+@media(max-width:900px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.stage{grid-template-columns:minmax(0,1fr);grid-template-areas:"fig" "ctl" "read" "try"}.chips{margin-left:0}.desc{min-height:0}.pc{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:460px){.grid4,.try{grid-template-columns:minmax(0,1fr)}}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tab[aria-selected=true]{background:#fff;color:#0f3b2c;border-color:#fff}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:4px 28px;margin:0;padding:0;list-style:none}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line)}
+.facts b{display:block;font-size:17px}
+.facts span{color:var(--muted);font-size:15px}
+.big{font:800 clamp(30px,3.4vw,40px) "Red Hat Display",sans-serif;display:block;color:var(--ink)}
 </style>
 </head>
 <body>
-  <main class="card">
-    <div class="status-dot" aria-hidden="true"></div>
-    <h1>This site is currently offline</h1>
-    <p class="lead">The owner has temporarily taken it offline. Please check back later.</p>
-    <section class="invite">
-      <div class="invite-title">Want your own website online in 30 seconds?</div>
-      <a class="invite-cta" href="https://htmlaunch.com/">Try HTMLaunch &rarr;</a>
-    </section>
-    <div class="footer"><a href="https://htmlaunch.com/">htmlaunch.com</a></div>
-  </main>
+<header class="band top">
+<div class="wrap">
+<h1>How twin-container temporary immersion systems work</h1>
+<p class="sub">Two containers joined by a tube: one holds the plants, the other stores the medium. Air pressure or a lift moves the medium across to immerse the explants, then it returns to the storage container for the aeration period.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="stage">
+<div class="fig"><svg id="main" viewBox="-240 20 1090 600" role="img" aria-label="Animated cut-away of a twin-container system"></svg></div>
+<div class="read">
+<div aria-live="polite">
+<div class="ph"><div class="letter" id="let">A</div><div><h2 id="pname">Aeration</h2><small id="pnum">Phase 1 of 4</small></div></div>
+<p class="desc" id="pdesc"></p>
+</div>
+<div class="stats">
+<div class="stat"><span id="lDrv">Air line</span><b id="sDrv">Off</b></div>
+<div class="stat"><span>Explants</span><b id="sExp">In air</b></div>
+<div class="stat"><span>Medium in culture chamber</span><b id="sMed">0%</b><div class="meter"><i id="mMed"></i></div></div>
+<div class="stat"><span>Air renewal in culture</span><b id="sVen">Good</b></div>
+</div>
+</div>
+<div class="try">
+<h3>Try it</h3>
+<div id="w0"><label for="pr">Air pressure: <output id="oPr"></output></label><input type="range" id="pr" min="1" max="8" step="0.5" value="5.5"></div>
+<div id="w1"><label for="am">Medium transferred: <output id="oAm"></output></label><input type="range" id="am" min="30" max="100" step="5" value="100"></div>
+<div id="w2"><label for="st">Cylinder stroke: <output id="oSt"></output></label><input type="range" id="st" min="20" max="100" step="5" value="100"></div>
+<label class="tog"><input type="checkbox" id="fl" checked> Air flushed from storage to culture at end of aeration</label>
+<p class="warn" id="warn"></p>
+</div>
+<div class="ctl">
+<input type="range" id="tl" min="0" max="1000" value="0" step="1" aria-label="Cycle timeline">
+<div class="ticks" id="ticks"></div>
+<div class="row">
+<button id="prev" aria-label="Previous phase">◀ Prev</button>
+<button id="play">❚❚ Pause</button>
+<button id="next" aria-label="Next phase">Next ▶</button>
+<select id="spd" aria-label="Playback speed"><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select>
+<div class="chips" id="chips"></div>
+</div>
+<p class="hint">Keys: space to play or pause, ← → to step between phases. Time is compressed; aeration lasts much longer than immersion in practice.</p>
+</div>
+</div>
+</div>
+</header>
+
+<section class="band sec">
+<div class="wrap">
+<h2>Four phases of the selected set-up</h2>
+<p class="lead" id="cardlead"></p>
+<div class="grid4" id="cards"></div>
+</div>
+</section>
+
+<section class="band sec" style="padding-top:0">
+<div class="wrap">
+<h2>Twin containers at a glance</h2>
+<p class="lead">One of the oldest TIS types (Lyam et al., 2012; M. Paula, 2012), and still one of the most used.</p>
+<div class="figs" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(13em,1fr));gap:18px;margin-bottom:26px">
+<div style="border-top:2px solid var(--ink);padding-top:8px"><span class="big">24%</span><span style="color:var(--muted);font-size:15px">of published TIS papers report a twin-flask design (De Carlo et al., 2021)</span></div>
+<div style="border-top:2px solid var(--ink);padding-top:8px"><span class="big">~5 kPa</span><span style="color:var(--muted);font-size:15px">low-pressure sterile air needed when the containers are linked from the top</span></div>
+<div style="border-top:2px solid var(--ink);padding-top:8px"><span class="big">2</span><span style="color:var(--muted);font-size:15px">ways to link them: from the top, or from the bottom (same or different levels)</span></div>
+</div>
+<div class="pc">
+<div class="pro"><h3>Advantages</h3><ul>
+<li><b>Simple and sterile</b><span>Twin-flask TISs are easy to operate and stay sterile during cultivation (Arencibia et al., 2013).</span></li>
+<li><b>Flexible materials</b><span>Bottles, jars or flasks of glass, plastic or polymer, linked by a glass or plastic pipe or a silicone tube (Schumann et al., 2012; Yang et al., 2010).</span></li>
+<li><b>Partial or total transfer</b><span>With a bottom connection you choose how much medium moves; knowing the containers' dimensions and volume is needed to set this.</span></li>
+<li><b>Pneumatic lift saves energy</b><span>The cylinder works only during immersion, which is much shorter than aeration, so energy use is lower and the solenoid valve carries current for less time, extending its life.</span></li>
+</ul></div>
+<div class="con"><h3>Disadvantages</h3><ul>
+<li><b>Poor ventilation</b><span>If air does not flow from the storage container to the culture container at the end of aeration, the culture headspace is poorly renewed (Georgiev et al., 2014).</span></li>
+<li><b>No CO₂ enrichment</b><span>The same condition also means no CO₂ enrichment of the culture container (Georgiev et al., 2014). Untick the flush option above to see it.</span></li>
+<li><b>Static pressure loss (top link)</b><span>With a top connection the air must overcome the static head of the liquid column, about 5 kPa.</span></li>
+</ul></div>
+</div>
+<p class="note">Pressure, volume and timing behaviour in the animation is illustrative, chosen to show what the text describes, not measured values.</p>
+</div>
+</section>
+
+<script>
+{
+const SYS=[
+{tab:'Top-connected, air (Fig. 4)',lead:'The tube enters both bottles from above and reaches their bottoms. Sterile air at about 5 kPa pushes the medium over the top into the culture chamber, and air into the culture bottle pushes it back.',drv:'Air line',
+ph:[['Aeration','Medium sits in the storage bottle.','The medium (5) sits in the storage bottle (6). The explants in the culture chamber (3) are in air. Each bottle has a port for the pressurised connection (1) with a sterile filter (2).'],
+['Medium transfer','Air pushes the medium over the top.','Low-pressure sterile air (about 5 kPa) enters the storage bottle from above. It overcomes the static pressure of the liquid column and pushes the medium up the connection tube (4) and over into the culture chamber.'],
+['Immersion','Explants covered by medium.','The explants are immersed. Displaced air left the culture bottle through its filter while the medium arrived.'],
+['Return to storage','Air pushes it back.','Air is now sent into the culture bottle. It pushes the medium back up the connection tube and into the storage bottle for the next aeration period.']]},
+{tab:'Ebb-and-Flow, air (Fig. 5A–D)',lead:'The containers are linked at the bottom and the culture chamber sits slightly higher than the storage tank. Air pressure on the medium surface pushes it up; releasing the pressure lets gravity bring it back.',drv:'Air line',
+ph:[['Aeration','Medium waits in the lower tank.','The culture chamber (5) sits slightly higher than the medium storage tank (3). The culture medium (4) is in the tank and the explants are in air.'],
+['Dislocating the medium','Air pressure drives it up the bottom tube.','Pressurised air enters the tank through the air-line connection (1) and antibacterial filter (2). It presses on the medium surface, lowering the level in the tank and pushing the medium through the bottom tube into the culture chamber.'],
+['Immersion','Pressure held; explants immersed.','The air pressure is held, so the medium stays in the culture chamber and immerses the explants. How much moves, partially or totally, is up to you.'],
+['Draining','Pressure released; gravity returns it.','The air pressure is released. By gravity the levels return to their original state, and the medium drains back down into the lower storage tank.']]},
+{tab:'Ebb-and-Flow, pneumatic (Fig. 5E–F)',lead:'The containers are linked at the bottom and a pneumatic cylinder sits under the storage flask. Raising the flask immerses the plants; lowering it drains them by gravity.',drv:'Pneumatic cylinder',
+ph:[['Aeration','Flask low; medium in storage.','The storage flask sits low on the retracted pneumatic cylinder (6). The medium settles in the storage flask, and only a little stays in the culture chamber (5).'],
+['Cylinder extends','Flask rises; medium flows across.','The cylinder is activated and lifts the storage flask above the culture chamber. Because the two are linked at the bottom, medium flows into the culture chamber.'],
+['Immersion','Flask held high.','With the flask held high, the explants stay immersed. Immersion is much shorter than aeration, so the cylinder and its solenoid valve work only briefly.'],
+['Cylinder retracts','Flask drops; gravity drains it.','The cylinder retracts. The flask drops below the culture chamber and gravity returns the medium completely to the storage container.']]}];
+const COL=['var(--pA)','var(--pB)','var(--pC)','var(--pD)'];const DUR=[4,3.5,4,3.5];const T=15;const ST=[0,4,7.5,11.5];
+const cfg={p:5.5,am:100,st:100,fl:true};let sys=1;
+const ease=u=>u<.5?2*u*u:1-((-2*u+2)**2)/2;
+const ph=t=>{let i=3;while(i>0&&t<ST[i])i--;return{i,u:Math.min(1,(t-ST[i])/DUR[i])}};
+const prog=(i,u)=>i===0?0:i===1?ease(u):i===2?1:1-ease(u);
+let uid=0;
+const plants=(x0,n,y,gap)=>Array.from({length:n},(_,k)=>{const x=x0+k*gap,h=14+(k*5%6);return `<g transform="translate(${x} ${y})"><path d="M0 0 V-${h}" stroke="#2f8a3f" stroke-width="2"/><ellipse cx="-5" cy="-${h*.6}" rx="6" ry="3" fill="#3e9d48" transform="rotate(-30 -5 -${h*.6})"/><ellipse cx="5" cy="-${h*.8}" rx="6" ry="3" fill="#5fbf5a" transform="rotate(28 5 -${h*.8})"/><ellipse cx="0" cy="-${h}" rx="4" ry="5" fill="#79d36a"/><path d="M0 0 l-5 12 M0 0 l4 13 M0 0 l0 10" stroke="#e8dcc4" stroke-width="1.2"/></g>`}).join('');
+function bottle(n,k,b){const{cx,by,w,h}=b,l=cx-w/2,r=cx+w/2,nw=w*.42,sh=by-h*.7,nt=by-h;
+const P=`M${l} ${by-10} Q${l} ${by} ${l+10} ${by} H${r-10} Q${r} ${by} ${r} ${by-10} V${sh+14} Q${r} ${sh} ${r-14} ${sh-6} L${cx+nw/2} ${nt} H${cx-nw/2} L${l+14} ${sh-6} Q${l} ${sh} ${l} ${sh+14} Z`;
+let s=`<clipPath id="bc${n}_${k}"><path d="${P}"/></clipPath><rect x="${l-10}" y="${by}" width="${w+20}" height="8" rx="2" fill="#6f7b76"/><path d="${P}" fill="url(#gl${n})"/><rect class="lq${k}" x="${l}" width="${w}" fill="url(#md${n})" clip-path="url(#bc${n}_${k})"/>`;
+if(b.mesh)s+=`<line x1="${l+8}" y1="${b.mesh}" x2="${r-8}" y2="${b.mesh}" stroke="#e6f5ec" stroke-width="2.5" stroke-dasharray="7 4"/>${plants(l+24,Math.floor((w-40)/26),b.mesh,26)}`;
+s+=`<path d="${P}" fill="none" stroke="#e6f5ec" stroke-width="3" stroke-linejoin="round"/><rect x="${cx-nw/2-6}" y="${nt-24}" width="${nw+12}" height="26" rx="3" fill="#1d1f1e"/><rect x="${cx-nw/2-6}" y="${nt-17}" width="${nw+12}" height="3" fill="#9aa3a0"/><rect x="${cx-nw/2-6}" y="${nt-9}" width="${nw+12}" height="3" fill="#9aa3a0"/>`;
+(b.ports||[]).forEach((px,j)=>{const fc=b.pc?b.pc[j]:'#e07b22';s+=`<rect x="${px-3}" y="${nt-62}" width="6" height="40" fill="#dfe7e1"/><rect x="${px-13}" y="${nt-50}" width="26" height="10" rx="2" fill="${fc}"/><rect x="${px-8}" y="${nt-54}" width="16" height="18" rx="2" fill="${fc}" opacity=".8"/>`});
+return s}
+const arrow=(n,cls,x,y,dir)=>dir==='in'?`<path class="${cls}" d="M${x} ${y-40} V${y-4}" stroke="#6cc4ff" stroke-width="4" marker-end="url(#ar${n})"/>`:dir==='out'?`<path class="${cls}" d="M${x} ${y-4} V${y-40}" stroke="#6cc4ff" stroke-width="4" marker-end="url(#ar${n})"/>`:`<path class="${cls}" d="M${x} ${y} H${x+46}" stroke="#6cc4ff" stroke-width="4" marker-end="url(#ar${n})"/>`;
+const GEO=[
+{B:[{cx:180,by:500,w:190,h:240,ports:[150]},{cx:450,by:500,w:210,h:270,ports:[492],mesh:458}],cul:1,sto:0,V:15000},
+{B:[{cx:180,by:390,w:220,h:235,ports:[148,212],pc:['#d79ac8','#a8c94a'],mesh:310},{cx:455,by:500,w:190,h:215,ports:[455]}],cul:0,sto:1,V:24200},
+{B:[{cx:180,by:390,w:220,h:235,ports:[148,212],pc:['#d79ac8','#a8c94a'],mesh:315},{cx:455,by:500,w:190,h:200,ports:[]}],cul:0,sto:1,V:22000}];
+function build(svg,k,labels){
+const n=uid++,G=GEO[k];
+let s=`<defs><linearGradient id="gl${n}" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".45" stop-color="#fff" stop-opacity=".03"/><stop offset="1" stop-color="#fff" stop-opacity=".13"/></linearGradient>
+<linearGradient id="md${n}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7cc6c"/><stop offset="1" stop-color="#d88f2a"/></linearGradient>
+<marker id="ar${n}" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#6cc4ff"/></marker>
+<marker id="ay${n}" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#fff1cc"/></marker></defs>`;
+const c=G.B[G.cul],st=G.B[G.sto];
+if(k===0){
+s+=`<path class="tb" d="M206 488 V180 Q206 140 246 140 H384 Q424 140 424 180 V488" fill="none" stroke="#dfe7e1" stroke-width="10" stroke-linejoin="round"/><path class="tq" d="M206 488 V180 Q206 140 246 140 H384 Q424 140 424 180 V488" fill="none" stroke="#f2b84b" stroke-width="5"/><rect class="leg" x="203.5" width="5" fill="#f2b84b"/>`;
+s+=bottle(n,0,G.B[0])+bottle(n,1,G.B[1]);
+s+=`<path class="fd" d="M206 488 V180 Q206 140 246 140 H384 Q424 140 424 180 V488" fill="none" stroke="#fff1cc" stroke-width="3" stroke-dasharray="7 9" stroke-linecap="round"/>`;
+const nt0=500-240,nt1=500-270;
+s+=arrow(n,'a0i',150,nt0-62,'in')+arrow(n,'a0o',150,nt0-62,'out')+arrow(n,'a1i',492,nt1-62,'in')+arrow(n,'a1o',492,nt1-62,'out');
+}else{
+s+=`<rect x="40" y="398" width="290" height="10" fill="#8c7350"/><rect x="56" y="408" width="10" height="190" fill="#6d5a3e"/><rect x="304" y="408" width="10" height="190" fill="#6d5a3e"/><rect x="20" y="598" width="680" height="8" fill="#55615c"/>`;
+s+=`<path class="tb" fill="none" stroke="#dfe7e1" stroke-width="11" stroke-linecap="round"/><path class="tq" fill="none" stroke="#f2b84b" stroke-width="6" stroke-linecap="round"/>`;
+s+=bottle(n,0,c);
+s+=`<g class="mv">${k===2?`<rect x="350" y="508" width="210" height="10" fill="#8c5a2e"/>`:''}${bottle(n,1,st)}</g>`;
+s+=`<path class="fd" fill="none" stroke="#fff1cc" stroke-width="3" stroke-dasharray="7 9" stroke-linecap="round"/>`;
+const ntc=390-235;
+s+=arrow(n,'v0o',148,ntc-62,'out')+arrow(n,'v0i',148,ntc-62,'in')+arrow(n,'v1o',212,ntc-62,'out')+arrow(n,'v1i',212,ntc-62,'in');
+if(k===1){const nts=500-215;s+=arrow(n,'a1i',455,nts-62,'in')+arrow(n,'a1x',463,nts-50,'side')}
+if(k===2){s+=`<rect class="rod" x="447" width="16" fill="#e6b0c8"/><rect x="420" y="520" width="70" height="78" rx="3" fill="#f1c232" stroke="#8a6a12" stroke-width="2"/><rect x="414" y="514" width="82" height="10" rx="2" fill="#e6b0c8"/><rect x="408" y="590" width="94" height="10" fill="#7d8b99"/><path class="cu" d="M520 590 V540" stroke="#6cc4ff" stroke-width="4" marker-end="url(#ar${n})"/><path class="cd" d="M520 540 V590" stroke="#6cc4ff" stroke-width="4" marker-end="url(#ar${n})"/>`}
+}
+if(labels){const R=(y,x,yy,t,cls='')=>`<g class="${cls}"><line x1="${x}" y1="${yy}" x2="600" y2="${y-6}" stroke="rgba(234,245,238,.45)"/><text x="608" y="${y}">${t}</text></g>`;
+const Lf=(y,x,yy,t)=>`<line x1="${x}" y1="${yy}" x2="28" y2="${y-6}" stroke="rgba(234,245,238,.45)"/><text x="20" y="${y}" text-anchor="end">${t}</text>`;
+if(k===0)s+=Lf(160,150,200,'Port for pressurised air (1)')+Lf(222,137,216,'Filter (2)')+Lf(330,86,330,'Medium storage tank (6)')+Lf(470,110,470,'Culture medium (5)')+R(130,330,140,'Connection tube (4)')+R(250,500,180,'Port + filter (1, 2)')+R(380,556,380,'Culture chamber (3)')+R(460,540,458,'Explants on mesh');
+if(k===1)s+=Lf(80,142,96,'Antibacterial filters (2)')+Lf(250,70,250,'Culture chamber (5)')+Lf(310,86,310,'Explants on mesh')+R(190,458,226,'Air-line connection (1)')+R(250,468,240,'Antibacterial filter (2)')+R(360,551,360,'Medium storage tank (3)')+R(460,520,470,'Culture medium (4)')+R(540,330,454,'Bottom connection tube');
+if(k===2)s+=Lf(80,142,96,'Antibacterial filters (2)')+Lf(250,70,250,'Culture chamber (5)')+Lf(315,86,315,'Explants on mesh')+R(560,492,560,'Pneumatic cylinder (6)')+`<g class="dl"><line class="dll" x1="551" x2="600" stroke="rgba(234,245,238,.45)"/><text class="dlt" x="608">Medium storage flask</text></g>`+R(470,334,450,'Flexible bottom tube','');
+s+=`<text class="tA" x="0" y="0" style="font-size:17px"></text>`}
+svg.innerHTML=s;
+const q=c=>svg.querySelector('.'+c),qa=c=>svg.querySelector('.'+c);
+return{k,lq:[q('lq0'),q('lq1')],tb:q('tb'),tq:q('tq'),fd:q('fd'),leg:q('leg'),mv:q('mv'),rod:q('rod'),cu:q('cu'),cd:q('cd'),dll:q('dll'),dlt:q('dlt'),ar:Object.fromEntries(['a0i','a0o','a1i','a1o','a1x','v0o','v0i','v1o','v1i'].map(c=>[c,q(c)]))}}
+const show=(e,v)=>{if(e)e.style.opacity=v?1:0};
+function state(k,t){
+const G=GEO[k],{i,u}=ph(t),p=prog(i,u),c=G.B[G.cul],s=G.B[G.sto];let f=0,hc,hs,leg=0,py=500,flow=0;
+const fl=cfg.fl&&i===0&&u>.65;
+if(k===0){const ok=cfg.p>=5;f=ok?p:0;leg=ok?0:Math.min(1,cfg.p/5)*p*.92;flow=ok&&(i===1||i===3)?(i===1?1:-1):0}
+if(k===1){f=p*cfg.am/100;flow=i===1?1:i===3?-1:0}
+if(k===2){py=500-p*(cfg.st/100)*245;
+const wc=c.w,ws=s.w,V=G.V,byc=c.by;let y=(wc*byc+ws*py-V)/(wc+ws);hc=byc-y;hs=py-y;if(hs<0){hs=0;hc=V/wc}if(hc<0){hc=0;hs=V/ws}f=hc*wc/V;flow=i===1?1:i===3?-1:0}
+if(k!==2){hc=f*G.V/c.w;hs=(1-f)*G.V/s.w}
+const sub=hc>c.by-c.mesh+20?'Submerged':hc>c.by-c.mesh-10?'Roots in medium':'In air';
+return{i,u,p,f,hc,hs,leg,py,flow,fl,sub}}
+function draw(r,t){
+const k=r.k,G=GEO[k],S=state(k,t),c=G.B[G.cul],s=G.B[G.sto],ck=t;
+const yc=c.by-S.hc,ysL=s.by-S.hs;
+r.lq[G.cul].setAttribute('y',yc);r.lq[G.cul].setAttribute('height',S.hc+2);
+r.lq[G.sto].setAttribute('y',ysL);r.lq[G.sto].setAttribute('height',S.hs+2);
+const A=r.ar;Object.values(A).forEach(e=>show(e,0));
+const i=S.i,mv=i===1||i===3;
+if(k===0){const ok=cfg.p>=5;
+r.tq.style.opacity=ok&&mv?Math.sin(Math.PI*Math.min(1,S.u*1.05)).toFixed(2):0;
+const top=488-S.leg*(488-180);r.leg.setAttribute('y',Math.min(top,ysL));r.leg.setAttribute('height',Math.max(0,488-Math.min(top,ysL)));
+if(i===1){show(A.a0i,1);show(A.a1o,ok)}if(i===2&&!ok){show(A.a0i,1)}if(i===3){show(A.a1i,ok);show(A.a0o,ok)}
+if(S.fl){show(A.a0i,1);show(A.a1o,1)}}
+else{const py=k===2?S.py:500;if(r.mv)r.mv.setAttribute('transform',`translate(0 ${py-500})`);
+const sx=s.cx-s.w/2,d=k===1?`M296 382 H322 V486 H${sx+6}`:`M296 382 C 340 382, 320 ${py-14}, ${sx+6} ${py-14}`;
+r.tb.setAttribute('d',d);r.tq.setAttribute('d',d);r.fd.setAttribute('d',d);
+r.tq.style.opacity=(S.hc>1||S.hs>12)?1:0;
+if(k===1){if(i===1||i===2)show(A.a1i,1);if(i===3)show(A.a1x,1);if(i===1)show(A.v0o,1);if(i===3)show(A.v0i,1),show(A.v1i,1);if(S.fl){show(A.a1i,1);show(A.v0o,1);show(A.v1o,1)}}
+if(k===2){r.rod.setAttribute('y',py+18);r.rod.setAttribute('height',Math.max(0,514-(py+18)));show(r.cu,i===1);show(r.cd,i===3);if(i===1)show(A.v0o,1);if(i===3)show(A.v0i,1);if(S.fl){show(A.v0o,1);show(A.v1o,1)}
+if(r.dll){const yy=py-120;r.dll.setAttribute('y1',yy);r.dll.setAttribute('y2',yy);r.dlt.setAttribute('y',yy+6)}}}
+const dir=S.fl?1:S.flow;
+r.fd.style.opacity=S.fl?.9:mv&&S.flow?Math.sin(Math.PI*Math.min(1,S.u*1.05)).toFixed(2)*(k===0&&cfg.p<5?0:1):0;
+r.fd.setAttribute('stroke',S.fl?'#6cc4ff':'#fff1cc');
+r.fd.style.strokeDashoffset=-dir*ck*55;
+return S}
+const $=id=>document.getElementById(id);
+let main,thumbs=[];
+const red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let t=0,playing=!red,spd=1,last=performance.now(),cur=-1;
+const setPlay=v=>{playing=v;$('play').textContent=v?'❚❚ Pause':'▶ Play'};setPlay(playing);
+$('tabs').innerHTML=SYS.map((x,k)=>`<button class="tab" role="tab" data-k="${k}" aria-selected="false">${x.tab}</button>`).join('');
+$('chips').innerHTML=[0,1,2,3].map(i=>`<button class="chip" data-i="${i}" aria-pressed="false"><i style="background:${COL[i]}"></i>${'ABCD'[i]}</button>`).join('');
+$('tl').style.background=`linear-gradient(90deg,${COL.map((c,i)=>`${c} ${ST[i]/T*100}% ${(ST[i]+DUR[i])/T*100}%`).join(',')})`;
+function setSys(k){sys=k;cur=-1;
+document.querySelectorAll('.tab').forEach((b,j)=>b.setAttribute('aria-selected',j===k));
+main=build($('main'),k,true);
+const P=SYS[k].ph;
+$('ticks').innerHTML=P.map((p,i)=>`<span style="width:${DUR[i]/T*100}%">${'ABCD'[i]} · ${p[0]}</span>`).join('');
+$('cardlead').textContent=SYS[k].lead+' Click a card to jump there in the animation.';
+$('cards').innerHTML=P.map((p,i)=>`<button class="card" data-i="${i}"><div class="th"><svg viewBox="30 40 600 575" aria-hidden="true"></svg></div><h3><i style="background:${COL[i]}">${'ABCD'[i]}</i>${p[0]}</h3><p>${p[1]}</p></button>`).join('');
+thumbs=[...document.querySelectorAll('.card svg')].map(sv=>build(sv,k,false));
+$('lDrv').textContent=SYS[k].drv;
+[0,1,2].forEach(j=>$('w'+j).style.display=j===k?'':'none');
+settings()}
+function paintThumbs(){thumbs.forEach((r,i)=>draw(r,ST[i]+DUR[i]*(i===1?.6:i===0?.3:.5)))}
+function render(){
+const S=draw(main,t);
+$('tl').value=Math.round(t/T*1000);
+if(S.i!==cur){cur=S.i;const p=SYS[sys].ph[cur];$('let').textContent='ABCD'[cur];$('let').style.background=COL[cur];$('pname').textContent=p[0];$('pnum').textContent=`Phase ${cur+1} of 4`;$('pdesc').textContent=p[2];document.querySelectorAll('.chip').forEach((b,i)=>b.setAttribute('aria-pressed',i===cur))}
+const drv=sys===2?['Retracted','Extending','Extended','Retracting'][S.i]:S.fl?'Flushing':sys===0?(S.i===1?'Into storage':S.i===2&&cfg.p<5?'Into storage':S.i===3?'Into culture':'Off'):['Off','Pressurised','Held','Released'][S.i];
+$('sDrv').textContent=drv;$('sExp').textContent=S.sub;
+$('sMed').textContent=Math.round(S.f*100)+'%';$('mMed').style.width=S.f*100+'%';
+$('sVen').textContent=S.fl?'Flushing now':cfg.fl?'Good':'Poor';$('sVen').style.color=cfg.fl?'':'var(--warn)'}
+function settings(){
+cfg.p=+$('pr').value;cfg.am=+$('am').value;cfg.st=+$('st').value;cfg.fl=$('fl').checked;
+$('oPr').textContent=`${cfg.p} kPa`;$('oAm').textContent=(cfg.am>=100?'total':'partial')+` (${cfg.am}%)`;$('oSt').textContent=cfg.st+'%';
+const w=$('warn');let msg='',ok=true;
+if(sys===0&&cfg.p<5){ok=false;msg='Below about 5 kPa the air cannot overcome the static pressure: the medium climbs part way up the tube and never reaches the culture chamber.'}
+if(sys===1&&cfg.am<100){const s=state(1,8).sub;ok=s==='Submerged';msg=`Partial transfer: ${cfg.am}% of the medium moves, so the explants are ${s==='Submerged'?'still submerged':s==='Roots in medium'?'wetted only at the roots':'not reached'}. Size the volume to the containers.`}
+if(sys===2&&cfg.st<100){const s=state(2,8).sub;ok=s==='Submerged';msg=`Short stroke: the flask is not lifted high enough above the culture chamber, so the explants are ${s==='Submerged'?'still submerged':s==='Roots in medium'?'wetted only at the roots':'not reached'}.`}
+if(!cfg.fl){ok=false;msg=(msg?msg+' ':'')+'No air flows from the storage container to the culture container at the end of aeration: poor ventilation and no CO₂ enrichment (Georgiev et al., 2014).'}
+if(!msg)msg='Settings are adequate: the explants are fully immersed, and air is flushed into the culture container at the end of aeration.';
+w.className=ok?'warn ok':'warn';w.textContent=msg;
+paintThumbs();render()}
+function loop(now){const dt=Math.min(.1,(now-last)/1000);last=now;if(playing){t=(t+dt*spd)%T}render();requestAnimationFrame(loop)}
+const jump=i=>{t=ST[(i+4)%4]+.001;render()};
+['pr','am','st','fl'].forEach(id=>$(id).addEventListener('input',settings));
+$('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(b){setSys(+b.dataset.k);jump(0)}});
+$('play').addEventListener('click',()=>setPlay(!playing));
+$('prev').addEventListener('click',()=>{const S=ph(t);jump(S.u>.15?S.i:S.i-1)});
+$('next').addEventListener('click',()=>jump(ph(t).i+1));
+$('spd').addEventListener('change',e=>spd=+e.target.value);
+$('tl').addEventListener('input',e=>{t=Math.min(T-.001,e.target.value/1000*T);render()});
+$('chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(b)jump(+b.dataset.i)});
+$('cards').addEventListener('click',e=>{const b=e.target.closest('.card');if(b){jump(+b.dataset.i);setPlay(true);$('main').scrollIntoView({behavior:red?'auto':'smooth',block:'center'})}});
+document.addEventListener('keydown',e=>{if(e.target.matches('input,select'))return;if(e.code==='Space'&&!e.target.matches('button')){e.preventDefault();setPlay(!playing)}if(e.key==='ArrowRight')jump(ph(t).i+1);if(e.key==='ArrowLeft')jump(ph(t).i-1)});
+window.tisSet=(k,tt)=>{if(k!==sys)setSys(k);playing=false;t=tt;render()};
+setSys(1);
+requestAnimationFrame(loop);
+}
+</script>
 </body>
 </html>
